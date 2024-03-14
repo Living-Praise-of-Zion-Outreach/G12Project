@@ -1,0 +1,688 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/background_group_box_light"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    android:gravity="top"
+    tools:context=".Fragments.SuynlFragment">
+    <RelativeLayout
+        style="@style/custom_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp">
+
+        <ScrollView style="@style/custom_scroll_view">
+
+            <LinearLayout
+                style="@style/background_group_box_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/CardView_Profile"
+                    >
+
+                    <LinearLayout
+                        android:id="@+id/ll_personal_info_profile"
+                        style="@style/CardView_LinearLayout_Profile"
+                        >
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk1_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk1_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk1_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk1_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk1_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk1_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                android:text=" 1: Salvation"
+
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk1_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 1"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk1_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk2_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk2_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk2_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk2_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk2_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk2_sunyl_consolidate"
+                                android:layout_width="150dp"
+                                android:maxLines="1"
+                                android:ellipsize="end"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                android:text=" 2: Repentance"
+                                android:gravity="end"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk2_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 2"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk2_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk3_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk3_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk3_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk3_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk3_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk3_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 3: Lordship"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk3_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 3"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk3_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk4_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk4_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk4_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk4_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk4_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk4_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 4: Forgiveness"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk4_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 4"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk4_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk5_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk5_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk5_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk5_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk5_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk5_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 5: 4 Important Fellowship"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk5_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 5"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk5_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk6_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk6_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk6_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk6_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk6_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk6_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 6: Devotional Life"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk6_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 6"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk6_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk7_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk7_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk7_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk7_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk7_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk7_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 7: Prayer"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk7_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 7"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk7_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk8_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk8_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk8_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk8_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk8_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk8_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 8: Witness"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk8_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 8"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk8_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk9_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk9_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk9_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk9_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk9_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk9_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 9: The Life of Obedience"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk9_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 9"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk9_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginEnd="16dp"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/til_wk10_sunyl_consolidate"
+                                style="@style/custom_TextInputLayout_inside_the_card"
+                                android:layout_width="0dp"
+                                android:layout_marginTop="10dp"
+                                android:hint="Date Train"
+                                android:visibility="gone"
+                                app:endIconMode="clear_text"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_chk_wk10_sunyl_consolidate"
+                                app:startIconDrawable="@drawable/ic_icon_calendar">
+
+                                <EditText
+                                    android:id="@+id/et_wk10_sunyl_consolidate"
+                                    style="@style/custom_EditText"
+                                    android:clickable="false"
+                                    android:cursorVisible="false"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="false"
+                                    tools:ignore="Autofill,LabelFor,TextFields" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <Switch
+                                android:id="@+id/switch_wk10_sunyl_consolidate"
+                                android:layout_width="67dp"
+                                android:layout_height="0dp"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk10_sunyl_consolidate"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+                            <TextView
+                                android:id="@+id/tv_chk_wk10_sunyl_consolidate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text=" 10: Togetherness"
+                                android:textSize="12sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toStartOf="@+id/switch_wk10_sunyl_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="WEEK 10"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toTopOf="@+id/til_wk10_sunyl_consolidate"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

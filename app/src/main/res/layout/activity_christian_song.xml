@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/custom_Activity"
+    tools:context=".Activity.ChristianSong">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_christian_song"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout style="@style/custom_RelativeLayout"
+        android:paddingTop="16dp"
+        android:gravity="top"
+        >
+
+        <ScrollView style="@style/custom_scrollView">
+            <LinearLayout
+                style="@style/background_group_box_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_song_title_christian_song"
+                    android:hint="@string/title_of_the_song"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout"
+                    android:visibility="visible">
+                    <EditText
+                        android:id="@+id/tv_song_title_christian_song"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_artist_name_christian_song"
+                        style="@style/custom_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/artist_name"
+
+                        app:endIconDrawable="@drawable/ic_icon_search"
+                        app:endIconMode="dropdown_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/fab_delete_artist_name_christian_song"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <AutoCompleteTextView
+                            android:id="@+id/ctv_artist_name_christian_song"
+                            style="@style/custom_auto_complete_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none|textCapCharacters"
+                            android:paddingStart="16dp"
+                            android:textSize="14sp"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_delete_artist_name_christian_song"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_icon_delete"
+                        app:fabSize="mini"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription"
+                        android:visibility="gone"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_album_name_christian_song"
+                        style="@style/custom_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/album_name"
+
+                        app:endIconDrawable="@drawable/ic_icon_search"
+                        app:endIconMode="dropdown_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/fab_delete_album_name_christian_song"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/ctv_album_name_christian_song"
+                            style="@style/custom_auto_complete_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none|textCapCharacters"
+                            android:paddingStart="16dp"
+                            android:textSize="14sp"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_delete_album_name_christian_song"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_icon_delete"
+                        app:fabSize="mini"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription"
+                        android:visibility="gone"
+                        />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_song_type_christian_song"
+                    android:hint="@string/song_type"
+                    style="@style/custom_TextInputLayout"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:endIconMode="dropdown_menu"
+                    android:layout_width="match_parent">
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_song_type_christian_song"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="none"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_song_language_christian_song"
+                    android:hint="@string/song_language"
+                    style="@style/custom_TextInputLayout"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:endIconMode="dropdown_menu"
+                    android:layout_width="match_parent">
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_song_languange_christian_song"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="none"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

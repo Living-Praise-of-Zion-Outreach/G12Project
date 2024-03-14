@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.form.ProfileBasicInfoForm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_personal_information_profile"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout
+        style="@style/custom_relative_layout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:paddingTop="0dp">
+
+            <LinearLayout
+                style="@style/background_group_box_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_about_personal_information"
+                    android:hint="@string/hint_about"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginStart="0dp"
+                    style="@style/custom_TextInputLayout"
+                    android:layout_height="wrap_content"
+                    >
+                    <EditText
+                        android:id="@+id/tv_about_personal_information"
+                        android:inputType="textMultiLine"
+                        android:gravity="start|top"
+                        style="@style/custom_EditText"
+                        tools:ignore="Autofill,LabelFor"
+                        android:lines="3"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_nickname_dialog_profile"
+                    android:hint="@string/hint_nickname"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_nickname_dialog_profile"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name_dialog_profile"
+                    android:hint="@string/hint_first_name"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_first_name_dialog_profile"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_middle_name_dialog_profile"
+                    android:hint="@string/hint_middle_name"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_middle_name_dialog_profile"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name_dialog_profile"
+                    android:hint="@string/hint_last_name"
+                    app:endIconMode="clear_text"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_last_name_dialog_profile"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_name_ext_dialog_profile"
+                    android:hint="@string/hint_name_extension"
+                    app:endIconMode="clear_text"
+                    android:inputType="textCapCharacters"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_name_ext_dialog_profile"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_dob_profile"
+                    android:hint="@string/hint_date_of_birth"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_icon_calendar"
+                    style="@style/custom_TextInputLayout"
+                    android:layout_width="170dp">
+                    <EditText
+                        android:id="@+id/tv_dob_dialog_profile"
+                        style="@style/custom_EditText"
+                        tools:ignore="Autofill,LabelFor"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_pob_profile"
+                    android:hint="@string/hint_place_of_birth"
+                    app:endIconMode="clear_text"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_pob_dialog_profile"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_marginStart="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="12dp"
+                    >
+                    <TextView
+                        android:id="@+id/tv_label_gender_dialog_profile"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:layout_marginEnd="16dp"
+                        android:layout_alignParentTop="true"
+                        android:text="@string/label_gender" />
+                    <RadioGroup
+                        android:id="@+id/rg_gender_dialog_profile"
+                        android:layout_width="wrap_content"
+                        android:layout_toEndOf="@+id/tv_label_gender_dialog_profile"
+                        android:layout_height="wrap_content">
+                        <RadioButton
+                            android:id="@+id/rb_gender_male_dialog_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="@string/label_male" />
+                        <RadioButton
+                            android:id="@+id/rb_gender_female_dialog_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="@string/label_female" />
+                        <RadioButton
+                            android:id="@+id/rb_gender_unspecified_dialog_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="@string/hint_unspecified" />
+                    </RadioGroup>
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_civil_status_dialog_profile"
+                    android:hint="@string/hint_civil_status"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_civil_status_dialog_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_height_dialog_profile"
+                        android:hint="@string/height"
+                        app:endIconMode="clear_text"
+                        style="@style/custom_TextInputLayout"
+                        app:boxCornerRadiusTopEnd="0dp"
+                        app:boxCornerRadiusBottomEnd="0dp"
+                        android:layout_width="120dp"
+                        >
+                        <EditText
+                            android:id="@+id/et_height_dialog_profile"
+                            style="@style/custom_EditText"
+                            tools:ignore="Autofill,LabelFor"
+                            android:inputType="numberDecimal"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_height_type_dialog_profile"
+                        android:hint="@string/metric"
+                        style="@style/custom_TextInputLayout"
+                        app:endIconMode="dropdown_menu"
+                        android:layout_toEndOf="@+id/til_height_dialog_profile"
+                        app:boxCornerRadiusTopStart="0dp"
+                        app:boxCornerRadiusBottomStart="0dp"
+                        android:layout_width="120dp"
+                        >
+                        <AutoCompleteTextView
+                            android:id="@+id/ctv_height_metric_dialog_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:textSize="14sp"
+                            android:paddingStart="16dp"
+                            android:inputType="textCapCharacters"
+                            tools:ignore="LabelFor,RtlSymmetry"
+                            style="@style/custom_auto_complete_textview">
+                        </AutoCompleteTextView>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_weight_dialog_profile"
+                        android:hint="@string/hint_weight"
+                        app:endIconMode="clear_text"
+                        style="@style/custom_TextInputLayout"
+                        app:boxCornerRadiusTopEnd="0dp"
+                        app:boxCornerRadiusBottomEnd="0dp"
+                        android:layout_width="120dp"
+                        >
+                        <EditText
+                            android:id="@+id/et_weight_dialog_profile"
+                            style="@style/custom_EditText"
+                            tools:ignore="Autofill,LabelFor"
+                            android:inputType="numberDecimal"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_weight_type_dialog_profile"
+                        android:hint="@string/metric"
+                        style="@style/custom_TextInputLayout"
+                        app:endIconMode="dropdown_menu"
+                        android:layout_toEndOf="@+id/til_weight_dialog_profile"
+                        app:boxCornerRadiusTopStart="0dp"
+                        app:boxCornerRadiusBottomStart="0dp"
+                        android:layout_width="120dp"
+                        >
+                        <AutoCompleteTextView
+                            android:id="@+id/ctv_weight_metric_dialog_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:textSize="14sp"
+                            android:paddingStart="16dp"
+                            android:inputType="textCapCharacters"
+                            tools:ignore="LabelFor,RtlSymmetry"
+                            style="@style/custom_auto_complete_textview">
+                        </AutoCompleteTextView>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_blood_type_dialog_profile"
+                    android:hint="@string/hint_blood_type"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu"
+                    android:layout_width="150dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_blood_type_dialog_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

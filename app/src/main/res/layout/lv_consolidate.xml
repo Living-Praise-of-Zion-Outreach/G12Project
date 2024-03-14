@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/background_group_box_light"
+    android:paddingBottom="1dp">
+
+
+    <androidx.cardview.widget.CardView style="@style/CardView_Profile"
+        android:id="@+id/item_cv_list_consolidate"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="0dp"
+        app:contentPadding="8dp"
+        app:cardCornerRadius="5dp"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_logo_list_consolidate"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/default_photo_dark"
+                app:civ_border_width="1dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/circle_image_view"
+                />
+
+            <TextView
+                android:id="@+id/tv_title_list_consolidate"
+                style="@style/Header_TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="SYLVSTER R. BELONIO"
+                android:textStyle="bold"
+                android:layout_marginTop="6dp"
+                app:layout_constraintStart_toEndOf="@+id/civ_logo_list_consolidate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_code_list_consolidate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Evangelized"
+                android:textSize="11sp"
+                android:textStyle=""
+                app:layout_constraintStart_toEndOf="@+id/civ_logo_list_consolidate"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_list_consolidate"
+                android:visibility="gone"
+                />
+
+
+            <TextView
+                android:id="@+id/tv_subtitle_list_consolidate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="09161319929 | sylvster129@gmail.com"
+                android:textSize="10sp"
+                android:textStyle="italic"
+                app:layout_constraintStart_toEndOf="@+id/civ_logo_list_consolidate"
+                app:layout_constraintTop_toBottomOf="@+id/tv_code_list_consolidate" />
+
+            <ImageView
+                android:id="@+id/iv_icon_arrow_list_consolidate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                style="@style/right_arrow_image_view"
+                android:contentDescription="@string/todo" />
+
+            <ImageView
+                android:id="@+id/iv_golden_crow_consolidate"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/golden_crown"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/iv_icon_arrow_list_consolidate"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

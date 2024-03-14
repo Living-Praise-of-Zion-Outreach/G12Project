@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/custom_Activity"
+    tools:context=".Activity.form.ProfileContactInfoForm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_contact_info_form"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout style="@style/custom_relative_layout">
+        <ScrollView style="@style/custom_scroll_view">
+        <LinearLayout
+            style="@style/background_group_box_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_mobile_no_profile_form"
+                android:hint="@string/hint_mobile_no"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout">
+                <EditText
+                    android:id="@+id/tv_mobile_no_form"
+                    android:inputType="number"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tel_no_profile_form"
+                android:hint="@string/hint_tel_no"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout">
+                <EditText
+                    android:id="@+id/tv_tel_no_profile_form"
+                    android:inputType="number"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

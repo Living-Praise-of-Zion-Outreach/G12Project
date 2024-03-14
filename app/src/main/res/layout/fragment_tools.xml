@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/background_group_box_light"
+    >
+
+    <RelativeLayout
+        style="@style/custom_RelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_adview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="0dp"
+        >
+
+        <ScrollView style="@style/custom_scroll_view"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                style="@style/background_group_box_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_evangelize_gift"
+                        style="@style/CardView_Lyrics_and_Chords"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingStart="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:contentPadding="0dp">
+
+                        <ImageView
+                            android:id="@+id/iv_evangelize_gift"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:contentDescription="@string/bisaya_christian_song"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/tools_evangelize"
+                            tools:ignore="RtlHardcoded" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tv_top_bisaya_lyrics_chords"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="right"
+                                android:text="@string/evangelize_materials"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlHardcoded" />
+
+                            <TextView
+                                android:id="@+id/tv_top_bisaya_lyrics_chords"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="right"
+                                android:text="@string/textview_text_evangalizism_guide"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="italic"
+                                tools:ignore="RtlHardcoded" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.60"
+                                android:background="@color/black"
+                                android:elevation="-1dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_learning_materials"
+                        style="@style/CardView_Lyrics_and_Chords"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingStart="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:contentPadding="0dp">
+                        <ImageView
+                            android:id="@+id/iv_learning_materials"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/tools_learning_materials"
+                            tools:ignore="RtlHardcoded"
+                            android:contentDescription="@string/todo" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tv_subtitle_learning_materials"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="right"
+                                android:text="@string/textview_text_simbanay_1_0_2_0_suynl"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlHardcoded" />
+                            <TextView
+                                android:id="@+id/tv_subtitle_learning_materials"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="right"
+                                android:text="@string/textview_text_lesson_guide"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="italic"
+                                tools:ignore="RtlHardcoded" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.60"
+                                android:background="@color/black"
+                                android:elevation="-1dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cv_life_class_learning_materials"
+                        style="@style/CardView_Lyrics_and_Chords"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:paddingStart="0dp"
+                        android:paddingLeft="0dp"
+                        android:paddingTop="0dp"
+                        android:paddingEnd="0dp"
+                        android:paddingRight="0dp"
+                        android:paddingBottom="0dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:contentPadding="0dp">
+                        <ImageView
+                            android:id="@+id/iv_life_class_learning_materials"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/lifeclass_learning_materials"
+                            tools:ignore="RtlHardcoded"
+                            android:contentDescription="@string/todo" />
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@+id/tv_subtitle_life_class_learning_materials"
+                                android:layout_marginEnd="20dp"
+                                android:gravity="right"
+                                android:text="@string/textview_text_student_book_lifeclass"
+                                android:textColor="@color/white"
+                                android:textSize="24sp"
+                                android:textStyle="bold"
+                                tools:ignore="RtlHardcoded" />
+                            <TextView
+                                android:id="@+id/tv_subtitle_life_class_learning_materials"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginEnd="20dp"
+                                android:layout_marginBottom="10dp"
+                                android:gravity="right"
+                                android:text="@string/textview_text_student_guide"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                android:textStyle="italic"
+                                tools:ignore="RtlHardcoded" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:layout_alignParentBottom="true"
+                                android:alpha="0.60"
+                                android:background="@color/black"
+                                android:elevation="-1dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/ll_adview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        style="@style/background_group_box_light"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:text="@string/textview_text_advertisement"/>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ad_banner_testing"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

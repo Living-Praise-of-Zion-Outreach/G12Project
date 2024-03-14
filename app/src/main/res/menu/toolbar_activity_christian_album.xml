@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/save_record"
+        android:orderInCategory="0"
+        android:id="@+id/menu_save_activity_christian_album"
+        android:icon="@drawable/ic_icon_save"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute"
+        />
+
+    <item android:title="@string/edit_record"
+        android:orderInCategory="1"
+        android:id="@+id/menu_edit_activity_christian_album"
+        android:icon="@drawable/ic_icon_edit"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+
+    <item android:title="@string/cancel_edit"
+        android:orderInCategory="2"
+        android:id="@+id/menu_cancel_activity_christian_album"
+        android:icon="@drawable/ic_icon_cancel"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+</menu>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/background_group_box_light"
+    tools:context=".Fragments.HolyBibleFragment"
+    >
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/background_group_box_light"
+    >
+
+    <FrameLayout
+        android:id="@+id/fl_content_holy_bible"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/bnv_holy_bible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+    </FrameLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bnv_holy_bible"
+        android:layout_width="0dp"
+        android:elevation="0dp"
+        android:visibility="visible"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="labeled"
+        style="@style/bottom_navigation_bar_themes"
+        app:menu="@menu/navigation_menu_bottom_bible"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_right_chapter_holy_bible"
+        style="@style/Float_Action_Button_Add"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="22dp"
+        android:clickable="true"
+        android:elevation="100dp"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:layout_marginBottom="25dp"
+        android:src="@drawable/ic_icon_chevron_right"
+        app:elevation="8dp"
+        app:fabCustomSize="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_content_holy_bible"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_left_chapter_holy_bible"
+        style="@style/Float_Action_Button_Add"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="20dp"
+        android:clickable="true"
+        android:layout_marginBottom="25dp"
+        android:contentDescription="@string/todo"
+        android:focusable="true"
+        android:src="@drawable/ic_icon_chevron_left"
+        app:elevation="8dp"
+        app:fabCustomSize="45dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/fl_content_holy_bible"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_footer_heading_holy_bible"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:visibility="visible"
+        style="@style/holy_bible_footer_background"
+        android:elevation="7dp"
+        android:textStyle="bold"
+        android:padding="16dp"
+        android:layout_height="wrap_content"
+        android:text="GENESIS 1 (NIV)"
+        app:layout_constraintBottom_toBottomOf="@+id/fl_content_holy_bible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_bottom_sheet_color_palette"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        style="@style/DialogSheet_Holy_Bible"
+        android:padding="0dp"
+        android:visibility="gone"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+        
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/darker_gray"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center|top"
+            android:contentDescription="@string/todo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/tv_selected_verse_holy_bible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="John 12,20"
+                android:gravity="center"
+                />
+        </LinearLayout>
+        
+    </FrameLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

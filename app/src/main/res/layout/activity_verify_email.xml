@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/custom_Activity"
+    tools:context=".Activity.form.VerifyEmail">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_verify_email"
+        style="@style/custom_ToolBar" />
+    <RelativeLayout style="@style/custom_relative_layout"
+        android:gravity="center">
+        <ScrollView style="@style/custom_scroll_view"
+            >
+            <LinearLayout style="@style/custom_linear_layout">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_code_verify"
+                    android:hint="@string/hint_enter_verification_code"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    style="@style/custom_TextInputLayout"
+                    tools:ignore="MissingConstraints">
+                    <EditText
+                        android:id="@+id/tv_code_verify"
+                        android:visibility="gone"
+                        style="@style/custom_EditText"
+                        android:inputType="number"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_confirm_code_verify"
+                    style="@style/theme_normal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginStart="32dp"
+                    android:padding="15dp"
+                    android:visibility="gone"
+                    android:text="@string/hint_confirm_code"/>
+                <Button
+                    android:id="@+id/btn_email_address_verify"
+                    style="@style/theme_normal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="32dp"
+                    android:padding="15dp"
+                    android:layout_marginStart="32dp"
+                    android:text="@string/hint_verify_email_address"/>
+                <Button
+                    android:id="@+id/btn_later_verify"
+                    style="@style/theme_normal_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="32dp"
+                    android:padding="15dp"
+                    android:layout_marginStart="32dp"
+                    android:backgroundTint="@color/error"
+                    android:text="@string/hint_verify_later"/>
+
+
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <group
+        android:id="@+id/side_menu_group_a_home"
+        android:checkableBehavior="single">
+        <item android:id="@+id/menu_dashboard"
+            android:icon="@drawable/ic_menu_dashboard"
+            android:visible="false"
+            android:title="@string/dashboard_title_toolbar" />
+        <item android:id="@+id/menu_profile"
+            android:icon="@drawable/ic_menu_profile"
+            android:visible="false"
+            android:title="@string/profile_title_toolbar" />
+        <item android:id="@+id/menu_holy_bible"
+            android:icon="@drawable/ic_icon_ebook"
+            android:visible="false"
+            android:title="@string/menu_title_holy_bible"/>
+        <item android:id="@+id/menu_terms_condition"
+            android:icon="@drawable/ic_icon_info"
+            android:visible="true"
+            android:title="Terms &amp; Condition"/>
+        <item android:id="@+id/menu_privacy_policy"
+            android:icon="@drawable/ic_icon_info"
+            android:visible="true"
+            android:title="Privacy Policy"/>
+        <item android:id="@+id/menu_achievement"
+            android:icon="@drawable/ic_menu_achievement"
+            android:visible="false"
+            android:title="@string/achievements_title_toolbar" />
+        <item android:id="@+id/menu_rewards"
+            android:icon="@drawable/ic_person"
+            android:visible="false"
+            android:title="@string/claim_rewards_title_toolbar" />
+    </group>
+
+
+    <item
+        android:id="@+id/side_menu_group_ministry_home"
+        android:title=""
+        android:visible="false">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/menu_learning"
+                    android:icon="@drawable/ic_icon_guide"
+                    android:visible="false"
+                    android:title="@string/menu_title_learning_guide"/>
+                <item android:id="@+id/menu_ministry"
+                    android:icon="@drawable/ic_icon_church"
+                    android:visible="false"
+                    android:title="@string/menu_title_ministry"/>
+                <item android:id="@+id/menu_chords_lyrics"
+                    android:icon="@drawable/ic_icon_lyrics"
+                    android:visible="false"
+                    android:title="@string/menu_text_christian_chords_amp_lyrics"/>
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/side_menu_group_music"
+        android:visible="false"
+        android:title="@string/music_section">
+        <menu>
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/menu_christian_album_home"
+                    android:icon="@drawable/ic_icon_album"
+                    android:visible="false"
+                    android:title="@string/christian_album"/>
+                <item android:id="@+id/menu_lyrics_chords_music_home"
+                    android:icon="@drawable/ic_icon_lyrics"
+                    android:visible="false"
+                    android:title="@string/christian_song_navigation"/>
+            </group>
+        </menu>
+    </item>
+
+        <item
+            android:id="@+id/side_menu_group_b_home"
+            android:visible="false"
+            android:title="More Trainings">
+            <menu>
+                <group android:checkableBehavior="single">
+                <item android:id="@+id/menu_trainings"
+                    android:icon="@drawable/ic_person"
+                    android:title="Trainings" />
+                <item android:id="@+id/menu_modules"
+                    android:icon="@drawable/ic_person"
+                    android:title="Module" />
+                <item android:id="@+id/menu_assignments"
+                    android:icon="@drawable/ic_person"
+                    android:title="Assignments" />
+                </group>
+            </menu>
+        </item>
+
+        <item android:title="@string/menu_group_title_other_settings"
+            android:visible="false"
+            >
+            <menu>
+                <group android:checkableBehavior="single"
+                    android:id="@+id/side_menu_group_c_home">
+                    <item android:id="@+id/menu_settings"
+                        android:icon="@drawable/ic_icon_settings"
+                        android:visible="true"
+                        android:title="@string/hint_settings" />
+                <item android:id="@+id/menu_log_out"
+                    android:icon="@drawable/ic_icon_logout"
+                    android:visible="false"
+                    android:title="@string/hint_log_out" />
+                </group>
+            </menu>
+        </item>
+</menu>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:title="Search Name"
+        android:id="@+id/menu_search_ebooks"
+        android:icon="@drawable/ic_icon_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:iconTint="@color/white"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        tools:ignore="UnusedAttribute" />
+
+</menu>

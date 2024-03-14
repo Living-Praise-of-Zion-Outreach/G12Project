@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item android:title="@string/hint_search_name"
+        android:id="@+id/menu_search_mnemonic_verse"
+        android:icon="@drawable/ic_icon_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:iconTint="@color/white"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        tools:ignore="UnusedAttribute" />
+    <item android:title="@string/menu_text_download_all_mnemonic_verses"
+        android:id="@+id/menu_download_mnemonic_verse"
+        android:icon="@drawable/ic_icon_download"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+</menu>

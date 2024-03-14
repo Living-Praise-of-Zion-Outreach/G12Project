@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/background_group_box_light"
+    android:padding="0dp"
+    android:layout_margin="0dp"
+    android:paddingBottom="1dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_card_view_church_details"
+        style="@style/CardView_Profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="0dp"
+
+        app:contentPadding="8dp"
+        android:layout_margin ="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginVertical="0dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_logo_list_view_members_church_details"
+                style="@style/circle_image_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/default_photo_dark"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_name_list_view_church_details"
+                style="@style/Header_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginTop="6dp"
+                android:text="SYLVSTER R. BELONIO "
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/iv_icon_arrow_list_lessons"
+                app:layout_constraintStart_toEndOf="@+id/iv_logo_list_view_members_church_details"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_position_list_view_members_church_details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginStart="8dp"
+                android:text="Mighty Warriors"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                android:visibility="visible"
+                app:layout_constraintEnd_toStartOf="@+id/iv_icon_arrow_list_lessons"
+                app:layout_constraintStart_toEndOf="@+id/iv_logo_list_view_members_church_details"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name_list_view_church_details" />
+
+
+            <ImageView
+                android:id="@+id/iv_icon_arrow_list_lessons"
+                style="@style/right_arrow_image_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/todo"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_icon_arrow_right"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

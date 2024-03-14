@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_church_ministry"
+        android:icon="@drawable/ic_icon_church"
+        android:visible="true"
+        android:title="@string/church"/>
+    <item
+        android:id="@+id/menu_g12_network_ministry"
+        android:icon="@drawable/ic_icon_network"
+        android:visible="true"
+        android:title="@string/hint_g12_network"/>
+    <item
+        android:id="@+id/menu_tracker_ministry"
+        android:icon="@drawable/ic_icon_tracker"
+        android:title="@string/hint_tracker"/>
+    <item
+        android:id="@+id/menu_tools_ministry"
+        android:icon="@drawable/ic_icon_tools"
+        android:title="@string/material_tools_toolbar"/>
+</menu>

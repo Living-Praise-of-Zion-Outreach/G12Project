@@ -1,0 +1,291 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; 
+                            --lightColor_y: #fff090; --lightColor_r: #ffd6d5; --lightColor_g: #d4fdd5; --lightColor_br: #ffd5a9; --lightColor_b: #d6d7ff;
+                            --darkColor_y: #ffcc00; --darkColor_r: #ff4d41; --darkColor_g: #38d142; --darkColor_br: #d77b42; --darkColor_b: #7f8aff;
+                        }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif;-webkit-user-select: none;}
+                        .text-default {color :#757575} .text-primary { color: #4fad8a;}.text-error { color: #dc3545;}.text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #66e2b2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF3F0;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #4eab87;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}    
+                        .highlight-animation{                           /* Firefox */  -moz-transition: all 1s ease-in;  /* WebKit */  -webkit-transition: all 1s ease-in;  /* Opera */  -o-transition: all 1s ease-in;  /* Standard */  transition: all 1s ease-in;  }     
+                        a { color: var(--_first); }
+                        a:hover{  color: var(--_light_first);  }              
+                        
+  </style>
+  </head>
+  <body id="my-body">
+   <div class="content">
+   <p id="verse_text" class="j">
+                     </p>
+   
+   <p class="c i text-secondary" style="line-height:1.4;margin-bottom:150px">
+    <small id="footer">
+    </small>
+    <br>
+    <small><a id="lnkLearnMore" onclick="openCopyRight()"  style="display:none;width:100%">Learn More</a></small>
+   </p>    
+   </div>
+  </body>
+</html>
+
+<script>
+/*
+loadData(`
+<b>The Beginning</b>
+                  <span id="sp-1" onclick="selectText(this)"><br><sup class="text-sm">1</sup>In the beginning God created the heavens and the earth.</span>
+                  <span id="sp-2" onclick="selectText(this)" style="background-color: var(--lightColor_y);color:black"><sup class="text-sm">2</sup> Now the earth was formless and empty, darkness was over the surface of the deep, and the Spirit of God was hovering over the waters.</span>
+                  <span id="sp-3" onclick="selectText(this)" style="background-color: var(--lightColor_r);color:black"><br><sup class="text-sm">3</sup> And God said, “Let there be light,” and there was light.</span>
+                  <span id="sp-4" onclick="selectText(this)" style="background-color: var(--lightColor_br);color:black"><sup class="text-sm">4</sup> God saw that the light was good, and he separated the light from the darkness.</span>
+                  <span id="sp-5" onclick="selectText(this)" style="background-color: var(--lightColor_g);color:black"><sup class="text-sm">5</sup>God called the light “day,” and the darkness he called “night.” And there was evening, and there was morning—the first day.</span>
+                  <span id="sp-6" onclick="selectText(this)" style="background-color: var(--lightColor_b);color:black"><br><sup class="text-sm">6</sup>And God said, “Let there be a vault between the waters to separate water from water.”</span>
+                  <span onclick="selectText(this)" style="background-color: var(--darkColor_y);color:white"><sup class="text-sm">7</sup>So God made the vault and separated the water under the vault from the water above it. And it was so.</span>
+                  <span onclick="selectText(this)" style="background-color: var(--darkColor_r);color:white"><sup class="text-sm">8</sup>God called the vault “sky.” And there was evening, and there was morning—the second day.</span>
+                  <span onclick="selectText(this)" style="background-color: var(--darkColor_br);color:white"><br><sup class="text-sm">9</sup>And God said, “Let the water under the sky be gathered to one place, and let dry ground appear.” And it was so.</span>
+                  <span onclick="selectText(this)" style="background-color: var(--darkColor_g);color:white"><sup class="text-sm">10</sup>God called the dry ground “land,” and the gathered waters he called “seas.” And God saw that it was good.</span>
+                  <span onclick="selectText(this)" style="background-color: var(--darkColor_b);color:white"><br><sup class="text-sm">11</sup>Then God said, “Let the land produce vegetation: seed-bearing plants and trees on the land that bear fruit with seed in it, according to their various kinds.” And it was so.</span>
+                  <span onclick="selectText(this)"><sup class="text-sm">12</sup>The land produced vegetation: plants bearing seed according to their kinds and trees bearing fruit with seed in it according to their kinds. And God saw that it was good.</span>
+                  <span onclick="selectText(this)"><sup class="text-sm">13</sup>And there was evening, and there was morning—the third day.</span>
+                  <span onclick="selectText(this)"><br><sup class="text-sm">14</sup>And God said, “Let there be lights in the vault of the sky to separate the day from the night, and let them serve as signs to mark sacred times, and days and years,</span>
+                  <span onclick="selectText(this)"><sup class="text-sm">15</sup>and let them be lights in the vault of the sky to give light on the earth.” And it was so.</span>
+                  <p><b>The Beginning</b></p>
+                  <span onclick="selectText(this)"><sup class="text-sm">16</sup>God made two great lights—the greater light to govern the day and the lesser light to govern the night. He also made the stars.</span>
+                  <span onclick="selectText(this)"><sup class="text-sm">17</sup>God set them in the vault of the sky to give light on the earth,</span>
+                  <span onclick="selectText(this)"><sup class="text-sm">18</sup>to govern the day and the night, and to separate light from darkness. And God saw that it was good.</span>
+                  
+                  <span id="sp-26" onclick="selectText(this)"><br><sup class="text-sm">26</sup> Then God said, “Let us make mankind in our image, in our likeness, so that they may rule over the fish in the sea and the birds in the sky, over the livestock and all the wild animals,<f>[1]</f> and over all the creatures that move along the ground.”</span>
+
+`,`New International Version 2011 – <br/>
+        The Holy Bible, New International Version® NIV® Copyright © 1973, 1978, 1984, 2011 by Biblica, Inc.® Used by Permission of Biblica, Inc.® All rights reserved worldwide. <br/>
+        English`,16,14,30,8); 
+        */
+
+function loadData(content,footer, selected_verse_highlight, fontSize, line_height){
+    
+  var element = document.getElementById("my-body");
+        element.style.fontSize = fontSize + "px";
+        element.style.lineHeight = line_height + "px";
+  
+  var container = document.getElementById("verse_text"); 
+      container.innerHTML = content; 
+      
+      
+      
+  var footer_container = document.getElementById("footer");  
+      footer_container.innerHTML = footer;   
+  
+  var lnkLearnMore = document.getElementById("lnkLearnMore");  
+        lnkLearnMore.style="display:block";  
+      
+  
+  setXYPos(selected_verse_highlight);    
+        
+ }
+ 
+function setXYPos(value){
+    animate_selected_verse(value);
+    javascript_event.getXYPos(getPost(value));
+    //alert(getPost(value));
+} 
+
+function openCopyRight(){
+    javascript_event.openCopyRight();
+    //alert("asd");
+}
+
+function hide_learn_more(){
+    var A = document.getElementById("lnkLearnMore");
+    A.style.display = "none";
+}
+ 
+function selectText(object){
+        if(object.style.borderBottom=="")
+            object.style.borderBottom = "2px dotted black";
+        else
+            object.style.borderBottom = "";
+        
+        verse_wrapper();
+}
+
+
+function getPost(value){
+var y_position=0;
+ var paragraphs = document.getElementsByTagName("span");
+        for(var i = 0; i < paragraphs.length; i++)
+        {        
+            for (const child of paragraphs[i].children) {
+                if(child.tagName=="SUP"){
+                    if(child.innerText==value)
+                        {
+                            
+                                                      
+                             var objects = paragraphs[i];
+                             
+                             var rect = objects.getBoundingClientRect();
+                                // the position related to the viewport
+                                const x = rect.x;
+                                const y = rect.y;
+                                y_position = y;
+                            
+                        }                    
+                }
+            }
+        }   
+        
+        return y_position;  
+}
+
+function animate_selected_verse(verse_highlight){
+     var y_position=0;
+
+     var paragraphs = document.getElementsByTagName("span");
+        for(var i = 0; i < paragraphs.length; i++)
+        {        
+            for (const child of paragraphs[i].children) {
+                if(child.tagName=="SUP"){
+                    if(child.innerText==verse_highlight)
+                        {
+                            //alert(verse_highlight + " is selected");
+                            var prev_b = paragraphs[i].style.backgroundColor;
+                            var prev_c = paragraphs[i].style.color;
+                            paragraphs[i].style.backgroundColor = "var(--_light_first)";
+                            paragraphs[i].style.color = "white";
+                            paragraphs[i].classList.add("highlight-animation");
+                            
+                            
+                             var objects = paragraphs[i];
+                             
+                             var rect = objects.getBoundingClientRect();
+                                // the position related to the viewport
+                                const x = rect.x;
+                                const y = rect.y;
+                                y_position = y;
+
+                             window.scrollTo({top: y, behavior: 'smooth'});
+                             
+                             var timerId = setInterval(function() {
+                                                      
+                                objects.style.backgroundColor = prev_b;
+                                objects.style.color = prev_c;                          
+                                clearInterval(timerId);
+                                        var removeClass = setInterval(function() {
+                                            objects.classList.remove("highlight-animation");
+                                            clearInterval(timerId);
+                                        }, 1000);
+                                                       
+                              }, 1000);
+                            
+                        }                    
+                }
+            }
+        }   
+        
+        return y_position;  
+}
+
+
+function verse_wrapper(){
+    var verse_selector=""; 
+
+    var paragraphs = document.getElementsByTagName("span");
+        for(var i = 0; i < paragraphs.length; i++)
+        {        
+            if(paragraphs[i].style.borderBottom!=""){
+                for (const child of paragraphs[i].children) {
+                  if(child.tagName=="SUP"){
+                        
+                        if(verse_selector=="")
+                            {verse_selector = child.innerText;}
+                        else 
+                            {
+                            verse_selector += "," + child.innerText;
+                            }    
+                  }
+                }
+            }       
+        }
+    
+    var temp_selector="";
+    var temp=0;
+    var order=false;
+    var prep = "";
+    var start_no = 0;
+    
+    var verseElement = [];
+    var verseIndex = 0;
+    
+    var data_selector = verse_selector.split(",");
+    
+    for(var i = 0; i < data_selector.length; i++){
+        if(start_no==0)
+            {
+            start_no = data_selector[i];
+            temp = data_selector[i];
+            verseElement[verseIndex] = temp;
+            }
+        else
+            {
+            var diff = data_selector[i] - temp;
+                if(diff==1)
+                    {
+                    temp = data_selector[i]; 
+                    verseElement[verseIndex] = start_no + "-" +  data_selector[i];          
+                    }
+                else
+                    {    
+                        verseIndex+=1;                        
+                        start_no = data_selector[i];
+                        temp = data_selector[i];
+                        verseElement[verseIndex] = temp;                                                         
+                    }    
+            }
+    }  
+    
+    
+    for(var i = 0; i < verseElement.length; i++){ 
+        if(i==0)
+            temp_selector = verseElement[i];
+        else
+            temp_selector += "," + verseElement[i];   
+    }
+    
+    if(verseIndex==0) temp_selector = verseElement[0];
+    
+        
+    alert(temp_selector);    
+    
+    javascript_event.getSelectedVerse(temp_selector);
+} 
+
+
+</script>

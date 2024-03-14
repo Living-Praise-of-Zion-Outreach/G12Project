@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/custom_Activity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_church_form"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout style="@style/custom_relative_layout">
+
+        <ScrollView style="@style/custom_scroll_view">
+
+            <LinearLayout
+                style="@style/background_group_box_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginBottom="16dp"
+                    >
+
+                    <ProgressBar
+                        android:id="@+id/pb_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:elevation="1dp"
+                        android:indeterminate="false"
+                        android:layout_marginTop="-8dp"
+                        android:indeterminateOnly="false"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:visibility="gone"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_cover_photo_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_photo"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/pb_church_form"
+                        tools:ignore="ContentDescription" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_upload_cover_photo_church_form"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/ic_icon_photo_camera"
+                        app:fabSize="mini"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_delete_cover_photo_church_form"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="60dp"
+                        android:src="@drawable/ic_icon_delete"
+                        app:fabSize="mini"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription"
+                        android:visibility="gone"
+                        />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/iv_logo_church_form"
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/default_photo"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:civ_border_width="5dp"
+                            app:civ_border_color="@color/white"
+                            />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_delete_logo_church_form"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/ic_icon_delete"
+                            android:layout_marginBottom="50dp"
+                            app:fabSize="mini"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="ContentDescription"
+                            android:visibility="gone"
+                            />
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:id="@+id/fab_upload_logo_church_form"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:src="@drawable/ic_icon_photo_camera"
+                            app:fabSize="mini"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            tools:ignore="ContentDescription" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_mother_church_church_form"
+                        style="@style/custom_TextInputLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mother_church"
+
+                        app:endIconDrawable="@drawable/ic_icon_search"
+                        app:endIconMode="dropdown_menu"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/fab_delete_mother_church"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <AutoCompleteTextView
+
+                            android:id="@+id/ctv_mother_church_church_form"
+                            style="@style/custom_auto_complete_textview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:paddingStart="16dp"
+                            android:textSize="14sp"
+                            tools:ignore="LabelFor,RtlSymmetry" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_delete_mother_church"
+                        android:layout_marginTop="6dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_icon_delete"
+                        app:fabSize="mini"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="ContentDescription"
+                        android:visibility="gone"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_church_name_church_form"
+                    android:hint="@string/church_name"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_church_name_church_form"
+                        android:inputType="textCapCharacters"
+                        style="@style/custom_EditText"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_date_founded_church"
+                    android:layout_marginStart="16dp"
+                    android:hint="@string/date_founded"
+                    app:endIconMode="clear_text"
+                    app:startIconDrawable="@drawable/ic_icon_calendar"
+                    style="@style/custom_TextInputLayout"
+                    android:layout_width="170dp">
+                    <EditText
+                        android:id="@+id/tv_d_founded_church"
+                        style="@style/custom_EditText"
+                        tools:ignore="Autofill,LabelFor"
+                        android:clickable="false"
+                        android:inputType="textCapCharacters"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/address" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_country_church_form"
+                    android:hint="@string/country"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_country_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="none|textCapCharacters"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_province_church_form"
+                    android:hint="@string/province"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_province_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_city_church_form"
+                    android:hint="@string/municipality_city"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_city_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_barangay_church_form"
+                    android:hint="@string/barangay"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_barangay_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_street_church_form"
+                    android:hint="@string/street"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_street_church_form"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_subdivision_village_church_form"
+                    android:hint="@string/subdivision_village"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_subdivision_village_church_form"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_house_block_church_form"
+                    android:hint="@string/house_block_lot_no"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/tv_house_block_church_form"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/settings" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_search_privacy_church_form"
+                    android:hint="@string/privacy_settings"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginStart="16dp"
+                    style="@style/custom_TextInputLayout"
+                    app:endIconMode="dropdown_menu">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/ctv_search_privacy_church_form"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:paddingStart="16dp"
+                        android:inputType="none"
+                        tools:ignore="LabelFor,RtlSymmetry"
+                        style="@style/custom_auto_complete_textview">
+                    </AutoCompleteTextView>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

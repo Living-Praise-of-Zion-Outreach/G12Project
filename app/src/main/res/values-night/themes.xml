@@ -1,0 +1,680 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.G12Project" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_light</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/_super_dark_fifth</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/night_button</item>
+        <item name="colorSecondaryVariant">@color/night_button</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l" tools:ignore="ObsoleteSdkInt">@color/_super_dark_fifth</item>
+
+        <!-- Customize your theme here. -->
+        <!-- THIS IS FOR CHANGING ICON COLOR IN TOOLBAR -->
+        <item name="android:textColorSecondary">@color/white</item>
+        <!-- THIS IS FOR CHANGING TEXT COLOR IN TOOLBAR -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- THIS IS FOR CHANGING TEXT COLOR SUB ITEM IN TOOLBAR -->
+        <item name="android:itemTextAppearance">@style/menuItem</item>
+        <!-- THIS IS FOR CHANGING ICON COLOR DRAWER TOOLBAR -->
+        <item name="drawerArrowStyle">@style/DrawerIconStyle</item>
+
+        <item name="android:navigationBarColor">@color/_super_dark_fifth</item>
+
+        <!-- THIS IS ACTION MODE BEHAVIOR TOOLBAR -->
+        <item name="android:actionModeBackground">@color/_super_dark_fifth</item>
+        <item name="android:actionModeSplitBackground">@color/accent</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="windowActionModeOverlay">true</item>
+
+        <item name="colorAccent">@color/_seven</item>
+        <item name="colorControlActivated">@color/_seven</item>
+    </style>
+
+    <style name="ThemeOverlay.PopupTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Arrow Icon Sub Menu Color -->
+        <item name="android:textColorSecondary">@color/white</item>
+        <!-- Primary brand color. -->
+        <item name="android:colorBackground">@color/_super_dark_fifth</item>
+        <!-- Color of Sub Header Text -->
+        <item name="android:textColor">@color/night_button</item>
+    </style>
+
+    <style name="FloatActionButton_Profile">
+        <item name="android:backgroundTint">@color/night_button</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginBottom">24dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_gravity">end|bottom</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="CardView_Primary_Photo_Profile">
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="cardCornerRadius">80dp</item>
+        <item name="cardElevation">10dp</item>
+    </style>
+
+    <style name="CardView_ImageView_Primary_Photo_Profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:tint">@color/white</item>
+    </style>
+
+    <style name ="Float_Action_Button_Add">
+        <item name="backgroundTint">@color/night_button</item>
+    </style>
+
+    <style name ="Float_Action_Button_Default">
+        <item name="backgroundTint">@color/night_button</item>
+    </style>
+
+    <style name="custom_linear_layout">
+        <item name="android:background">@color/dark_gray</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">0dp</item>
+    </style>
+
+    <style name="custom_scroll_view">
+        <item name="android:background">@color/dark_gray</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+    <style name="CardView_Profile">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:animateLayoutChanges">true</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">10dp</item>
+        <item name="contentPadding">20dp</item>
+        <item name="cardBackgroundColor">@color/_super_dark_fifth</item>
+    </style>
+    <style name="CardView_LinearLayout_Profile">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:animateLayoutChanges">true</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="CardView_LinearLayout_Content_Profile">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:animateLayoutChanges">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginTop">16dp</item>
+    </style>
+
+    <style name="ImageView_Icon_Headings_Profile">
+        <item name="android:tint">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+
+    <style name="TextView_Headings_Profile">
+        <item name="android:textColor">@color/night_button</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TextView_Left_Profile">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">130dp</item>
+    </style>
+
+    <style name="TextView_Left_Sub_Headings_Profile">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextView_Right_Profile">
+        <item name="android:textStyle">italic</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+    </style>
+
+    <style name="Navigation_View_Custom">
+        <item name="itemIconTint">@color/night_button</item>
+        <item name="itemTextColor">@color/white</item>
+        <item name="itemBackground">@color/dark_divider</item>
+        <item name="android:textColorSecondary">@color/light_gray</item>
+    </style>
+
+    <style name="horizontal_bar">
+        <item name="android:background">@color/night_button</item>
+    </style>
+
+    <style name="header_backcolor">
+        <item name="android:background">@color/_dark_fifth</item>
+    </style>
+
+    <style name="panel_content_backcolor">
+        <item name="android:background">@color/primary_text</item>
+    </style>
+
+    <style name="background_color_view">
+        <item name="android:background">@color/primary_text</item>
+    </style>
+
+    <style name="link_color">
+        <item name="android:textColor">@color/night_button</item>
+    </style>
+
+
+    <!-- BACKGROUND STYLE -->
+    <style name="background_color">
+        <item name="android:background">@color/black</item>
+    </style>
+
+    <style name="background_group_box_light">
+        <item name="android:background">@color/dark_gray</item>
+    </style>
+
+    <!--=========================================================================================-->
+    <!-- IMAGE VIEW SECTION  -->
+    <!--=========================================================================================-->
+    <style name="circle_image_view">
+        <item name="civ_border_color">@color/night_button</item>
+    </style>
+    <style name="right_arrow_image_view">
+        <item name="tint">@color/night_button</item>
+    </style>
+    <style name="Header_TextView">
+        <item name="android:textColor">@color/night_button</item>
+    </style>
+
+    <!--=========================================================================================-->
+    <!-- BUTTON STYLE -->
+    <!--=========================================================================================-->
+    <style name="theme_normal_button">
+        <item name="backgroundTint">@color/night_button</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="theme_normal_accent">
+        <item name="backgroundTint">@color/_fourth</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="theme_normal_button_add">
+        <item name="backgroundTint">@color/green_color</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="right_corner_button">
+        <item name="backgroundTint">@color/primary_text</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeTopLeft">0dp</item>
+        <item name="cornerSizeBottomRight">20dp</item>
+        <item name="cornerSizeTopRight">20dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <!--=========================================================================================-->
+    <!-- ACTIVITY THEMES -->
+    <!--=========================================================================================-->
+    <style name="custom_Activity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:background">@color/dark_gray</item>
+    </style>
+    <!--=========================================================================================-->
+    <!-- TOOLBAR THEMES -->
+    <!--=========================================================================================-->
+    <style name="custom_ToolBar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="android:elevation">10dp</item>
+        <item name="android:background">@color/_dark_fifth</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="iconTint">@color/white</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+    </style>
+    <!-- THIS IS FOR CHANGING TEXT COLOR SUB ITEM IN TOOLBAR -->
+    <style name="menuItem" parent="Widget.AppCompat.TextView.SpinnerItem">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- THIS IS FOR CHANGING ICON COLOR DRAWER TOOLBAR -->
+    <style name="DrawerIconStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+    <!--=========================================================================================-->
+    <!-- RELATIVE LAYOUT -->
+    <!--=========================================================================================-->
+    <style name="custom_relative_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginTop">?attr/actionBarSize</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:background">@color/_fifth</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:gravity">top</item>
+    </style>
+    <style name="custom_RelativeLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">?attr/actionBarSize</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:screenOrientation">portrait</item>
+
+        <item name="android:background">@color/dark_gray</item>
+    </style>
+    <!--=========================================================================================-->
+    <!-- SCROLLVIEW -->
+    <!--=========================================================================================-->
+    <style name="custom_scrollView">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:elevation">10dp</item>
+    </style>
+
+    <!--=========================================================================================-->
+    <!-- PROGRESS BAR -->
+    <!--=========================================================================================-->
+    <style name="custom_circleProgressBar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:indeterminateTint">@color/night_button</item>
+    </style>
+    <!-- TEXTVIEW -->
+    <style name="custom_TextView">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+    <style name="custom_TextView_Header">
+        <item name="android:textColor">@color/night_button</item>
+    </style>
+    <style name="roundedBackground_ProgressBar">
+        <item name="android:background">@drawable/bg_round_dark</item>
+    </style>
+    <!--=========================================================================================-->
+    <!-- TEXT_INPUT_LAYOUT  -->
+    <!--=========================================================================================-->
+    <style name="custom_TextInputLayout" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+
+        <item name="textOutlineColor">@color/green_color</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="startIconTint">@color/white</item>
+        <item name="endIconTint">@color/white</item>
+        <item name="helperTextTextColor">@color/error_color</item>
+        <item name="boxBackgroundColor">@color/_super_dark_fifth</item>
+
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/night_button</item>
+
+
+        <item name="boxStrokeColor">@color/night_button</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="errorEnabled">true</item>
+        <item name="helperText">""</item>
+        <item name="helperTextEnabled">true</item>
+    </style>
+    <style name="custom_TextInputLayout_inside_the_card" parent="TextAppearance.AppCompat">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">80dp</item>
+
+        <item name="textOutlineColor">@color/green_color</item>
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="startIconTint">@color/white</item>
+        <item name="endIconTint">@color/white</item>
+        <item name="helperTextTextColor">@color/error_color</item>
+        <item name="boxBackgroundColor">@color/_fifth</item>
+
+        <item name="android:textColorHint">@color/secondary_text</item>
+        <item name="colorControlNormal">@color/night_button</item>
+
+
+        <item name="boxStrokeColor">@color/night_button</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="errorEnabled">true</item>
+        <item name="helperText">""</item>
+        <item name="helperTextEnabled">true</item>
+    </style>
+    <!--=========================================================================================-->
+    <!-- EDIT_TEXT -->
+    <!--=========================================================================================-->
+    <style name="custom_EditText">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_alignParentStart">true</item>
+
+        <item name="android:bufferType">editable</item>
+        <item name="android:foregroundGravity">top</item>
+        <item name="android:inputType">textAutoComplete</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:iconTint">@color/night_button</item>
+        <item name="android:textColor">@color/text_or_icons</item>
+        <item name="android:textCursorDrawable">@drawable/dark_cursor_mode</item>
+
+    </style>
+
+    <style name="splash_screen_backcolor">
+        <item name="android:background">@color/_super_dark_fifth</item>
+    </style>
+
+    <style name="theme_other_button">
+        <item name="backgroundTint">@color/primary_light</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="cornerRadius">20dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="theme_toolBar">
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="theme_navigation_header">
+        <item name="android:background">@color/primary_text</item>
+    </style>
+
+    <style name="navigation_drawer" parent="ThemeOverlay.AppCompat.navTheme">
+        <item name="android:background">@color/_fifth</item>
+        <item name="itemIconTint">@color/_seven</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
+
+    <style name="theme_textview">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <!-- AUTO COMPLETE TEXTVIEW -->
+    <style name="custom_auto_complete_textview">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+
+
+    <!-- THIS IS FOR CHANGING DIVIDER COLOR ICON -->
+    <style name="theme_divider">
+        <item name="android:background">@color/dark_divider</item>
+    </style>
+
+    <!--=========================================================================================-->
+    <!-- DIALOG SECTION -->
+    <!--=========================================================================================-->
+    <style name="AlertDialogTheme" parent="ThemeOverlay.AppCompat.Dialog.Alert">
+        <!-- Used for the buttons -->
+        <item name="colorAccent">@color/primary_light</item>
+        <!-- Used for the title & text -->
+        <item name="android:textColorPrimary">@color/white</item>
+        <!-- Used for the background -->
+        <item name="android:background">@color/primary_text</item>
+    </style>
+    <!-- THIS IS FOR ANIMATION OF ALERT DIALOG -->
+    <style name="SlidingDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+    <!-- PROFILE VIEW ONLY -->
+    <style name="CustomDialog" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:textColorPrimary">@color/night_button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <item name="android:windowBackground">@drawable/bg_round_dark</item>
+    </style>
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/night_button</item>
+    </style>
+    <!--=========================================================================================-->
+
+    <style name="header_evangelize_form">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/night_button</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="GroupBUtton">
+        <item name="toggle_backgroundColor">@color/_seven</item>
+        <item name="toggle_textColor">@color/white</item>
+    </style>
+
+    <style name="GroupBUtton_consolidate">
+        <item name="toggle_backgroundColor">@color/_seven</item>
+        <item name="toggle_textColor">@color/white</item>
+    </style>
+
+    <style name="edit_icon_profile">
+        <item name="tint">@color/night_button</item>
+    </style>
+
+    <style name="tableview">
+        <item name="headerColor">@color/night_button</item>
+    </style>
+
+    <style name="simple_button">
+        <item name="android:textColor">@color/white</item>
+        <item name="backgroundTint">@color/night_button</item>
+    </style>
+
+    <style name="lessons_left_background">
+        <item name="android:background">@color/_six</item>
+    </style>
+    <style name="lessons_text_color">
+        <item name="android:textColor">@color/light_gray</item>
+    </style>
+
+
+    <style name="MyDialogTheme" parent="Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:background">@color/_dark_fifth</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+        <!-- Style for negative button -->
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+    </style>
+
+    <style name="no_data_found_icon">
+        <item name="tint">@color/_seven</item>
+        <item name="android:textColor">@color/_seven</item>
+    </style>
+
+    <style name="dashboard_logo">
+        <item name="android:src">@drawable/dashboard_logo_dark</item>
+    </style>
+
+    <style name="circular_progressbar_report">
+        <item name="android:progressDrawable">@drawable/circle_progress_bar_dark</item>
+    </style>
+
+    <!-- Theme.AppCompat.Light is not a dialog theme -->
+    <style name="CalendarDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="colorAccent">@color/_light_seven</item>
+        <item name="android:headerBackground">@color/_dark_fifth</item>
+        <item name="android:background">@color/_fifth</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/DatePickerTheme.ButtonBarNegativeButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/DatePickerTheme.buttonBarPositiveButtonStyle</item>
+    </style>
+
+        <style name="DatePickerTheme.buttonBarPositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/_light_seven</item>
+        </style>
+        <style name="DatePickerTheme.ButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/_third</item>
+        </style>
+
+    <style name="set_up_mode_text_color">
+        <item name="android:textColor">@color/_light_seven</item>
+    </style>
+    <style name="ellipses_left">
+        <item name="android:src">@drawable/ellipse_left_dark</item>
+    </style>
+    <style name="ellipses_right">
+        <item name="android:src">@drawable/ellipse_right_dark</item>
+    </style>
+
+    <style name="TabLayoutPower" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/_dark_fifth</item>
+        <item name="tabSelectedTextColor">@android:color/white</item>
+        <item name="tabTextColor">@android:color/white</item>
+    </style>
+
+    <style name="label_header">
+        <item name="android:textColor">@color/_seven</item>
+    </style>
+
+    <style name="simple_spinner">
+        <item name="android:background">@drawable/style_spinner_dark</item>
+    </style>
+
+    <style name="simple_background_image">
+        <item name="android:background">@color/_super_dark_fifth</item>
+    </style>
+
+    <style name="simple_separator">
+        <item name="android:background">@color/_six</item>
+    </style>
+
+
+    <style name="simple_cardview">
+        <item name="cardBackgroundColor">@color/_light_seven</item>
+    </style>
+    <style name="DialogSheet">
+        <item name="android:background">@drawable/bg_bottom_sheet_dialog_dark</item>
+    </style>
+    <style name="DialogSheet_CardView">
+        <item name="cardBackgroundColor">@color/_dark_fifth</item>
+    </style>
+
+    <style name="label_simple_accent">
+        <item name="android:textColor">@color/_fourth</item>
+    </style>
+
+    <style name="custom_tag">
+        <item name="android:background">@drawable/style_round_tag_dark</item>
+    </style>
+
+    <style name="disable_icon">
+        <item name="tint">@color/dark_gray</item>
+    </style>
+
+    <style name="webview_background">
+        <item name="tint">@color/_fifth</item>
+    </style>
+    <style name="pdf_background">
+        <item name="android:background">@color/_fifth</item>
+    </style>
+
+    <style name="accent_icons">
+        <item name="tint">@color/_fourth</item>
+        <item name="android:textColor">@color/_fourth</item>
+    </style>
+
+    <style name="collapsing_toolbar_background">
+        <item name="contentScrim">@color/_dark_fifth</item>
+    </style>
+
+    <style name="simple_cardview_content">
+        <item name="cardBackgroundColor">@color/_dark_fifth</item>
+    </style>
+
+    <style name="similar_books">
+        <item name="cardBackgroundColor">@color/_fifth</item>
+    </style>
+    <style name="top_10_cardview_background">
+        <item name="cardBackgroundColor">@color/_fifth</item>
+    </style>
+
+    <style name="bottom_navigation_bar_themes">
+        <item name="android:background">@color/_dark_fifth</item>
+        <item name="itemTextColor">@color/bnv_tab_item_foreground_dark</item>
+        <item name="itemIconTint">@color/bnv_tab_item_foreground_dark</item>
+    </style>
+
+    <style name="simple_cardview_holy_bible">
+        <item name="cardBackgroundColor">@color/_dark_fifth</item>
+    </style>
+
+    <style name="material_button_holy_bible">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:backgroundTint">@color/_fifth</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+
+    <style name="simple_holy_bible_book_selector">
+        <item name="cardBackgroundColor">@color/_super_dark_fifth</item>
+    </style>
+
+    <style name="CardView_Holy_Bible_Chapter_Verse">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:animateLayoutChanges">true</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">10dp</item>
+        <item name="contentPadding">20dp</item>
+        <item name="cardBackgroundColor">@color/_super_dark_fifth</item>
+    </style>
+
+    <style name="holy_bible_footer_background">
+        <item name="android:background">@color/_fifth</item>
+    </style>
+
+    <style name="DialogSheet_Holy_Bible">
+        <item name="android:background">@drawable/bg_bsb_holy_bible_dark</item>
+    </style>
+
+    <style name="card_view_circle_logo">
+        <item name="cardBackgroundColor">@color/_seven</item>
+    </style>
+
+    <style name="bible_language_backcolor">
+        <item name="android:background">@color/_dark_fifth</item>
+    </style>
+
+</resources>

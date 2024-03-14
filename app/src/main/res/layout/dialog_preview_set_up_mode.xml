@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/custom_Activity">
+
+    <RelativeLayout style="@style/custom_relative_layout"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_height="wrap_content">
+        <ScrollView style="@style/custom_scroll_view">
+            <LinearLayout style="@style/custom_linear_layout">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Are you sure about your selection?"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CHURCH NAME"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    style="@style/Header_TextView"
+                    />
+                <TextView
+                    android:id="@+id/tv_church_none_set_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_church_data_set_up"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_church_set_up"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/default_photo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_church_name_set_up"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text="LIVING PRAISE OF ZION"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_church_set_up"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_church_address_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="Valencia City, Bukidnon, 8709"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        app:layout_constraintStart_toEndOf="@+id/iv_church_set_up"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_church_name_set_up" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NETWORK LEADER"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    style="@style/Header_TextView"
+                    />
+                <TextView
+                    android:id="@+id/tv_network_leader_none_set_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_network_leader_data_set_up"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_network_leader_set_up"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/default_photo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_name_network_leader_set_up"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="SYLVSTER R. BELONIO"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_network_leader_set_up"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_church_network_leader_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="LIVING PRAISE OF ZION"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        app:layout_constraintStart_toEndOf="@+id/iv_network_leader_set_up"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name_network_leader_set_up" />
+
+                    <TextView
+                        android:id="@+id/tv_network_name_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="MIGHTY WARRIORS"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        app:layout_constraintStart_toEndOf="@+id/iv_network_leader_set_up"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_church_network_leader_set_up" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INVITED BY"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    style="@style/Header_TextView"
+                    android:gravity="center"
+                    />
+                <TextView
+                    android:id="@+id/tv_invite_none_set_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="None"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginStart="10dp"
+                    android:gravity="center"
+                    />
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/cl_invite_data_set_up"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/iv_invite_set_up"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/default_photo"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_name_invite_set_up"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="SYLVSTER R. BELONIO"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/iv_invite_set_up"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_church_invite_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="LIVING PRAISE OF ZION"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        app:layout_constraintStart_toEndOf="@+id/iv_invite_set_up"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_name_invite_set_up" />
+
+                    <TextView
+                        android:id="@+id/tv_invite_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="MIGHTY WARRIORS"
+                        android:textSize="11sp"
+                        android:textStyle="italic"
+                        app:layout_constraintStart_toEndOf="@+id/iv_invite_set_up"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_church_invite_set_up"
+                        tools:ignore="SmallSp" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            </ScrollView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragments.SearchPickerFragment"
+    >
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_username_sign_up"
+        style="@style/custom_TextInputLayout"
+        android:hint="@string/hint_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_perm_identity">
+
+        <EditText
+            android:id="@+id/txt_username_sign_up"
+            style="@style/custom_EditText"
+
+            android:inputType="text"
+            android:maxLines="1"
+            tools:ignore="Autofill,LabelFor"
+            android:imeOptions="actionDone"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

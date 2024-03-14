@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/background_group_box_light"
+    tools:context=".Activity.form.ConsolidateTracker">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_consolidate_tracker"
+        style="@style/custom_ToolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <RelativeLayout
+        style="@style/custom_relative_layout"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/ll_adview"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_consolidate_tracker">
+
+        <ScrollView style="@style/custom_scroll_view"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout style="@style/custom_linear_layout">
+
+                <androidx.cardview.widget.CardView style="@style/CardView_Profile">
+
+                    <LinearLayout
+                        android:id="@+id/ll_personal_info_profile"
+                        style="@style/CardView_LinearLayout_Profile">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cv_logo_consolidate"
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                app:cardCornerRadius="50dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <ImageView
+                                    android:id="@+id/iv_logo_consolidate"
+                                    android:layout_width="80dp"
+                                    android:layout_height="80dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/default_photo_dark" />
+                            </androidx.cardview.widget.CardView>
+
+
+                            <TextView
+                                android:id="@+id/tv_name_consolidate"
+                                style="@style/label_header"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="SYLVSTER R. BELONIO"
+                                android:textStyle="bold"
+                                app:layout_constraintStart_toEndOf="@+id/cv_logo_consolidate"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <TextView
+                                android:id="@+id/tv_address_consolidate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="P4, Maapag, asd asda dsd asd as dsad  Valencia City, Bukidnon"
+                                android:textSize="11sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/cv_logo_consolidate"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_name_consolidate" />
+
+                            <TextView
+                                android:id="@+id/tv_mobile_no_consolidate"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="11dp"
+                                android:text="091613139929 | sylvster129@gmail.com"
+                                android:textSize="11sp"
+                                android:textStyle="italic"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/cv_logo_consolidate"
+                                app:layout_constraintTop_toBottomOf="@+id/tv_address_consolidate" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/relativeLayout_consolidate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/toolbar_consolidate">
+
+                            <nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup
+                                android:id="@+id/group_button_consolidate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:justifyContent="center"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:maxLine="@integer/material_motion_duration_medium_2"> <!-- this attribute is from the underlying FlexboxLayout -->
+
+                                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                                    android:id="@+id/btn1_summary"
+                                    style="@style/GroupBUtton_consolidate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="38dp"
+                                    app:toggle_text="SUMMARY"
+                                    app:toggle_textSize="11dp" />
+
+                                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                                    android:id="@+id/btn1_consolidate"
+                                    style="@style/GroupBUtton_consolidate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="38dp"
+                                    app:toggle_text="SIMBANAY 1.0"
+                                    app:toggle_textSize="11dp" />
+
+                                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                                    android:id="@+id/btn2_consolidate"
+                                    style="@style/GroupBUtton_consolidate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="38dp"
+                                    android:visibility="gone"
+                                    app:toggle_selectedBackgroundColor="@color/primary"
+                                    app:toggle_text="Simbanay 2"
+                                    app:toggle_textSize="9dp" />
+
+                                <nl.bryanderidder.themedtogglebuttongroup.ThemedButton
+                                    android:id="@+id/btn4_consolidate"
+                                    style="@style/GroupBUtton_consolidate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="38dp"
+                                    android:elevation="10dp"
+                                    app:toggle_selectedBackgroundColor="@color/success"
+                                    app:toggle_text="SUYNL"
+                                    app:toggle_textSize="11dp" />
+
+                            </nl.bryanderidder.themedtogglebuttongroup.ThemedToggleButtonGroup>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <FrameLayout
+                    android:id="@+id/fl_viewer_consolidate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/green_color" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_adview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical"
+        style="@style/background_group_box_light"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="11sp"
+            android:text="@string/textview_text_advertisement"/>
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/ad_banner_testing"
+            />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

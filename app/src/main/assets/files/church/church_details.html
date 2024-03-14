@@ -1,0 +1,207 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif; font-size:13px}
+                        .text-default {color :#757575} 
+                        .text-primary { color: #660000;}
+                        .text-error { color: #dc3545;}
+                        .text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #8b0000 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF3F0;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 0px 20px 20px 20px; } 
+                        .indent{margin-left:20px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #D3D3D3;padding: 14px 16px;box-shadow: 0 5px 7px rgb(0 0 0 / 0.4);} 
+                        
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none;padding:1px 16px 1px 16px;background-color:#fff7bf;border-radius: 0px 20px 20px 20px;margin:4px 0px 0px 5px}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #8b0000;display:inline;color:black;display:inline;padding:5px 10px 5px 10px;border-radius: 10px 10px 0px 0px;margin:0px 0px 0px 5px}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        button {color:white}
+                                               
+                        /* Style the tab */
+                        .tab {
+                          border-radius: 20px 20px 0px 0px;
+                          overflow: hidden;
+                          border: 1px solid #660000;
+                          background-color: #660000;
+                          color:"#ffffff";
+                        }
+
+                        /* Style the buttons inside the tab */
+                        .tab button {
+                          background-color: inherit;
+                          float: left;
+                          border: none;
+                          outline: none;
+                          cursor: pointer;
+                          padding: 14px 16px;
+                          transition: 0.3s;
+                          font-size: 12px;
+                          color:"#ffffff";
+                        }
+
+                        /* Change background color of buttons on hover */
+                        .tab button:hover {
+                          background-color: #8b0000;
+                        }
+
+                        /* Create an active/current tablink class */
+                        .tab button.active {
+                          background-color: #8b0000;
+                        }
+
+                        /* Style the tab content */
+                        .tabcontent {
+                          display: none;
+                          background-color: #fff7bf;
+                          padding: 6px 12px;
+                          border: 1px solid #ccc;
+                          border-top: none;
+                          border-radius: 0px 0px 20px 20px;
+                          -webkit-animation: fadeEffect 1s;
+                          animation: fadeEffect 1s;
+                        }
+                                        
+                        /* Fade in tabs */
+                        @-webkit-keyframes fadeEffect {
+                          from {opacity: 0;}
+                          to {opacity: 1;}
+                        }
+
+                        @keyframes fadeEffect {
+                          from {opacity: 0;}
+                          to {opacity: 1;}
+                        }                
+                        * {
+                            box-sizing: border-box;
+                          }      
+                          /* Create two equal columns that floats next to each other */
+                        .column {
+                          float: left;
+                          padding: 0px;
+                        }
+
+                        /* Clear floats after the columns */
+                        .row:after {
+                          content: "";
+                          display: table;
+                          clear: both;
+                        }  
+                        .col-left{
+                        width:40%;
+                        }
+                        .col-right{
+                        width:60%;
+                        }
+                                                                                        
+  </style>
+
+  </head>
+  <body>
+    <div class="content">
+    <br>
+    <h3 class="text-primary">DETAILS</h3>
+        <div class="row">
+            <div class="column col-left">
+              <b class="text-light-primary indent">About</b>
+            </div>
+            <div class="column col-right">
+              <span id="tvAbout" class="sj"></span>
+            </div>
+        </div>
+            <div class="row">
+            <div class="column col-left">
+              <b class="text-light-primary indent">Church Name</b>
+            </div>
+            <div class="column col-right">
+              <span id="tvChurchName" class="sj"></span>
+            </div>
+        </div>
+   <br>
+    <h3 class="text-primary">LOCATION</h3>
+    
+        <div class="row">
+            <div class="column col-left">
+              <b class="text-light-primary indent">Address</b>
+            </div>
+            <div class="column col-right">
+              <span id="tvAddress" class="sj"></span>
+            </div>
+        </div>
+ 
+        <br>
+    <h3 class="text-primary">CONTACT DETAILS</h3>      
+    
+        <div class="row">
+            <div class="column col-left">
+              <b class="text-light-primary indent">Name</b>
+            </div>
+            <div class="column col-right">
+              <span id="tvContactPerson" class="sj"></span>
+            </div>         
+        </div>
+        <div class="row">
+            <div class="column col-left">
+              <b class="text-light-primary indent">Contact #</b>
+            </div>
+            <div class="column col-right">
+              <span id="tvContactPerson" class="sj"></span>
+            </div>         
+        </div>
+        <div class="row">
+            <div class="column col-left">
+              <b class="text-light-primary indent">Email</b>
+            </div>
+            <div class="column col-right">
+              <span id="tvContactPerson" class="sj"></span>
+            </div>         
+        </div>
+    
+    </div>
+  </body>
+  
+  
+</html>
+
+<script>
+
+var obj = "churchName~xxx~lastName~Doe";
+loadData(obj);
+
+
+function loadData(obj) {
+
+    var data = obj.split("~");
+
+    setData(document.getElementById("tvAbout"),"newtextasd sad asd lajslasjd lasjd lakjlksa jdlsdj lsakjd laskdj lkasjd lajk");
+    setData(document.getElementById("tvChurchName"),data[0]);
+    setData(document.getElementById("tvAddress"),"Baranagay Maapag, Valencia City, Bukidnon");
+  
+}
+
+function setData(parent, value){
+        parent.innerText = parent.textContent = value;
+}
+
+
+
+</script>

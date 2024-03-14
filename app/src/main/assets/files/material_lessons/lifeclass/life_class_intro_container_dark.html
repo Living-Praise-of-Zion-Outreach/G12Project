@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif; font-size:16px}
+                        .text-default {color :#8b0000} 
+                        .text-primary { color: var(--_seven);}
+                        .text-error { color: #dc3545;}
+                        .text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: var(--_light_seven) }
+                        .text-light-primary { color: var(--_light_seven) }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: var(--_fifth);margin: 0px; padding: 0px; height: 100%;color:white} 
+                        .content{  padding: 1px 15px 20px 15px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: var(--_seven);padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #00000;display:inline;padding:3px;color:black}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        .responsive { width: 100%; height: auto;}
+                        
+                        hide {
+                            transition: 1s ease height;
+                        }
+                        
+                        show {
+                            transition: 1s ease height;
+                        }
+                        
+                        .custom-select{
+                            background-color:var(--_seven);
+                            padding:5px 5px 5px 10px;
+                            border-radius: 10px;
+                            margin-top:3px;                           
+                            width:auto;
+                            border-color: var(--_dark_fifth);
+                  		    border-width: 1px 1px 1px 1px;
+                            color:white;
+                            float:right;
+                          }
+                          .select select,
+                  		.select option {
+                  			border: none;
+                  			outline: none;
+                  			font-size: 18px;
+                  			padding: 5px 5px 5px 5px;
+                  			background-color:var(--_seven);
+                  			color: white;
+                  			-webkit-appearance: none; /* for Safari */
+                  			margin: 0;
+                  			border-radius: 0;
+                  		}
+                  		.custom-select:focus { 
+                              outline: none !important;
+                              border-color: var(--_light_seven);
+                              box-shadow: 0 0 10px var(--_light_seven);
+                           }
+                        
+  </style>
+  <script>
+                        var normal_color = "#000000";
+                        var normal_color_background = "#f9cece";
+                        var active_color = "#ffffff";
+                        var active_color_background = "#8b0000";
+  </script>
+  </head>
+  <body>
+        <div id="content" class="content"></div> 
+  </body>
+</html>
+
+<script>
+
+   
+
+    function loadData(content,languageList,currentLanguage){
+        document.getElementById("content").innerHTML  = content;
+        var combobox = document.getElementById("cboBibleLanguageSelector");
+         var list = languageList.split("~");
+         for (i = 0; i < list.length; i++) {
+                var option = document.createElement("option");
+                option.text = list[i];
+                if(currentLanguage==list[i]){ option.setAttribute('selected', true);}
+                combobox.add(option);
+         }
+    }
+    
+    function selectLanguage(){
+    const select = document.querySelector('select')
+    const text = getSelectedText(select);
+    javascript_event.getCurrentLanguage(text);
+    alert(text);
+    }
+    
+    const getSelectedText = (el) => {
+      if (el.selectedIndex === -1) {
+        return null;
+      }
+      return el.options[el.selectedIndex].text;
+    }
+
+
+    function showLabelVerse(panel, verses, content){
+    showVerse(panel,verses, content);
+    }
+    
+    function showVerse(parent,verses, content) {   
+    
+      if (verses.style.display === "none") {
+        verses.style.display = "block";
+        parent.innerHTML="[-]";
+        parent.style.backgroundColor = active_color_background;
+        parent.style.color = active_color;
+        content.style.backgroundColor = active_color_background;
+        content.style.color = active_color;
+       
+        }
+      else if(verses.style.display ===""){
+        verses.style.display = "block";
+        parent.innerHTML="[-]";
+        parent.style.backgroundColor = active_color_background;
+        parent.style.color = active_color;
+        content.style.backgroundColor = active_color_background;
+        content.style.color = active_color;
+    
+      } else {
+        verses.style.display = "none";
+        parent.innerHTML="[+]";
+        parent.style.backgroundColor = normal_color_background;
+        parent.style.color = normal_color;
+        content.style.backgroundColor = normal_color_background;
+        content.style.color = normal_color;
+     
+      }
+    }
+</script>

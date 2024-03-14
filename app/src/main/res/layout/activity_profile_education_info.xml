@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.form.ProfileEducationInfoForm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_edu_info_profile"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout
+        style="@style/custom_relative_layout">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:paddingTop="0dp">
+
+    <LinearLayout
+        style="@style/background_group_box_light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_edu_attain_profile"
+            android:hint="@string/hint_educational_attainment"
+            style="@style/custom_TextInputLayout"
+            app:endIconMode="dropdown_menu">
+
+            <AutoCompleteTextView
+                android:id="@+id/ctv_edu_attain_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:inputType="textCapCharacters"
+                tools:ignore="LabelFor,RtlSymmetry"
+                style="@style/custom_auto_complete_textview">
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_edu_elem_profile"
+            android:hint="@string/hint_elementary_school"
+            style="@style/custom_TextInputLayout"
+            app:endIconMode="dropdown_menu">
+
+            <AutoCompleteTextView
+                android:id="@+id/ctv_edu_elem_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:inputType="textCapCharacters"
+                tools:ignore="LabelFor,RtlSymmetry"
+                style="@style/custom_auto_complete_textview">
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_elem_year_grad_profile"
+            android:hint="@string/hint_year_graduated"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_icon_calendar"
+            style="@style/custom_TextInputLayout"
+            android:layout_width="200dp">
+            <EditText
+                android:id="@+id/tv_elem_year_grad_profile"
+                style="@style/custom_EditText"
+                tools:ignore="Autofill,LabelFor"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_edu_high_profile"
+            android:hint="@string/hint_high_school_name"
+            style="@style/custom_TextInputLayout"
+            app:endIconMode="dropdown_menu">
+
+            <AutoCompleteTextView
+                android:id="@+id/ctv_edu_high_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:inputType="textCapCharacters"
+                tools:ignore="LabelFor,RtlSymmetry"
+                style="@style/custom_auto_complete_textview">
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_high_year_profile"
+            android:hint="@string/hint_year_graduated"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_icon_calendar"
+            style="@style/custom_TextInputLayout"
+            android:layout_width="200dp">
+            <EditText
+                android:id="@+id/tv_high_year_profile"
+                style="@style/custom_EditText"
+                tools:ignore="Autofill,LabelFor"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_edu_college_profile"
+            android:hint="@string/hint_college_school_name"
+            style="@style/custom_TextInputLayout"
+            app:endIconMode="dropdown_menu">
+
+            <AutoCompleteTextView
+                android:id="@+id/ctv_edu_college_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:inputType="textCapCharacters"
+                tools:ignore="LabelFor,RtlSymmetry"
+                style="@style/custom_auto_complete_textview">
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_college_year_profile"
+            android:hint="@string/hint_year_graduated"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_icon_calendar"
+            style="@style/custom_TextInputLayout"
+            android:layout_width="200dp">
+            <EditText
+                android:id="@+id/tv_college_year_profile"
+                style="@style/custom_EditText"
+                tools:ignore="Autofill,LabelFor"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_edu_course_profile"
+            android:hint="@string/hint_course"
+            style="@style/custom_TextInputLayout"
+            app:endIconMode="dropdown_menu">
+
+            <AutoCompleteTextView
+                android:id="@+id/ctv_edu_course_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:paddingStart="16dp"
+                android:inputType="textCapCharacters"
+                tools:ignore="LabelFor,RtlSymmetry"
+                style="@style/custom_auto_complete_textview">
+            </AutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

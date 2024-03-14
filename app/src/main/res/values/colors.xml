@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- RED/DEEP ORANGE THEME -->
+
+    <color name="primary">#660000</color>
+    <color name="primary_dark">#0e53b8</color>
+    <color name="primary_light">#D3BE9B</color>
+    <color name="accent">#0d6efd</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="text_or_icons">#FFFFFF</color>
+    <color name="divider">#FFF3F0</color>
+
+    <!-- BOOTSTRAP COLORS -->
+    <color name="light_primary">#68a5ff</color>
+    <color name="success">#198754</color>
+    <color name="error">#dc3545</color>
+    <color name="warning">#fd7e14</color>
+    <color name="info">#0dcaf0</color>
+
+
+    <!-- LPZ PALLETE -->
+    <color name="_dark_first">#3a0000</color>
+    <color name="separator_light">#ececec</color>
+    <color name="_light_first">#8b0000</color>
+    <color name="_first">#660000</color>
+    <color name="_light_second">#fff7f7</color>
+    <color name="_second">#FFF3F0</color>
+    <color name="_third">#868784</color>
+    <color name="_fourth">#F9DD4D</color>
+    <color name="_super_dark_fifth">#0a1a29</color>
+    <color name="_dark_fifth">#0d2439</color>
+    <color name="_fifth">#102E4A</color>
+    <color name="_six">#313628</color>
+    <color name="_light_seven">#1ebabd</color>
+    <color name="_seven">#168B8D</color>
+
+    <color name="night_button">#168B8D</color>
+
+    <color name="white_divider">#FFF3F0</color>
+    <color name="dark_divider">#303030</color>
+    <color name="error_color">#FF0000</color>
+
+    <color name="light_gray">#e6e6e6</color>
+    <color name="dark_gray">#102E4A</color>
+    <color name="green_color">#00cc00</color>
+    <color name="link_color">#d2691e</color>
+
+    <color name="facebook_background">#1877f2</color>
+    <color name="google_background"></color>
+
+</resources>

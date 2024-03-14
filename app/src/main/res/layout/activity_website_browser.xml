@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    style="@style/custom_Activity"
+    tools:context=".Activity.WebsiteBrowser">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_website_browser"
+        style="@style/custom_ToolBar" />
+    <RelativeLayout style="@style/custom_RelativeLayout">
+
+        <ProgressBar
+            android:id="@+id/progress_bar_website_browser"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            />
+
+        <!--Swipe Refresh Layout -->
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <WebView
+                android:id="@+id/webview_website_browser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/progress_bar_website_browser"
+                android:layout_above="@+id/linear_layout_website_browser"
+                />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_layout_website_browser"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            style="@style/custom_linear_layout"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_back_website_browser"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_icon_arrow_back"
+                android:layout_weight="1"
+                android:padding="10dp"
+                style="@style/no_data_found_icon"
+                android:contentDescription="@string/search_backward" />
+
+            <ImageView
+                android:id="@+id/iv_forward_website_browser"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_icon_arrow_forward"
+                android:layout_weight="1"
+                android:padding="10dp"
+                style="@style/no_data_found_icon"
+                android:contentDescription="@string/search_forward" />
+
+            <ImageView
+                android:id="@+id/iv_refresh_website_browser"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_icon_refresh"
+                android:layout_weight="1"
+                android:padding="10dp"
+                style="@style/no_data_found_icon"
+                android:contentDescription="@string/refresh_search" />
+
+            <ImageView
+                android:id="@+id/iv_share_website_browser"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_icon_share"
+                android:layout_weight="1"
+                style="@style/no_data_found_icon"
+                android:padding="10dp"
+                android:contentDescription="@string/share_website" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

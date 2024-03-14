@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout style="@style/custom_relative_layout"
+        android:gravity="center">
+        <ScrollView style="@style/custom_scroll_view">
+        <LinearLayout style="@style/custom_linear_layout">
+
+            <TextView
+                android:id="@+id/tv_questionaire_set_up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_marginBottom="50dp"
+                android:text="Are you one of the member of the church?"
+                android:gravity="center"/>
+
+            <RelativeLayout
+                android:id="@+id/rlChoices_Set_Up"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center">
+                <RadioGroup
+                    android:id="@+id/rg_choices_set_up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center">
+                    <RadioButton
+                        android:id="@+id/rb_yes_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Yes"/>
+                    <RadioButton
+                        android:id="@+id/rb_no_set_up"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"/>
+                </RadioGroup>
+            </RelativeLayout>
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_fill_up_set_up"
+                android:hint="Church Name"
+                android:layout_marginEnd="32dp"
+                android:layout_marginStart="32dp"
+
+                style="@style/custom_TextInputLayout"
+                app:endIconMode="clear_text">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ctv_fill_up_set_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingStart="16dp"
+                    android:inputType="none|textCapCharacters"
+                    tools:ignore="LabelFor,RtlSymmetry"
+                    style="@style/custom_auto_complete_textview">
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_search_name_set_up"
+    android:layout_width="match_parent"
+    android:visibility="gone"
+    android:layout_height="300dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_search_name_set_up"
+        style="@style/custom_TextInputLayout"
+        android:hint="Search Name"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/tv_search_name_set_up"
+            style="@style/custom_EditText"
+            android:inputType="textCapCharacters"
+            tools:ignore="Autofill,LabelFor" />
+
+
+    </com.google.android.material.textfield.TextInputLayout>
+    <ListView
+        android:id="@+id/lv_data_set_up"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_search_name_set_up"
+        tools:ignore="NestedScrolling">
+    </ListView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_search_invite_name_set_up"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="300dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_search_invite_name_set_up"
+                    style="@style/custom_TextInputLayout"
+                    android:hint="Search Name"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <EditText
+                        android:id="@+id/tv_search_invite_name_set_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+                <ListView
+                    android:id="@+id/lv_data_invite_set_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/til_search_invite_name_set_up"
+                    tools:ignore="NestedScrolling">
+                </ListView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+    </RelativeLayout>

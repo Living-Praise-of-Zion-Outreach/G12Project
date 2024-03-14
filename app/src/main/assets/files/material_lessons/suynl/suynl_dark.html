@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>               
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif; font-size:16px;color:#ffffff;-webkit-user-select: none;}
+                        .text-default {color :#757575} 
+                        .text-primary { color: #168B8D;}
+                        .text-error { color: #dc3545;}
+                        .text-success {color: #168B8D;background-color: ;padding:10px}
+                        .text-secondary {color: #757575;}
+                        .text-light-primary { color: #1ebabd }
+                        .text-super-light-primary { color: #96f0f2 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                        body { width:100%; background-color: #102E4A;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 1px 20px 20px 15px; } 
+                        .indent{margin-left:0px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #0d2439;padding:8px} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none}
+                        .button-verse{width:30px;height:30px;background-color:#868784;border-color: white;display:inline;padding:3px;color:#8b0000}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#168B8D;color:white}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+  </style>
+  <script>
+                        var normal_color = "#ffffff";
+                        var normal_color_background = "#868784";
+                        var active_color = "#ffffff";
+                        var active_color_background = "#f2b909";
+  </script>
+  </head>
+  <body>
+   
+   <div class="content">
+   <h3 id="headings" class="headings">TOPIC 10: <span class="text-light-primary">PAKIG-UBAN SA MGA MAGTUTU-O DIHA SA IGLESIA</span></h3>  
+       <div id="content-data">
+       </div> 
+   </div> 
+  </body>
+</html>
+
+<script>
+
+    function loadData(heading,content,listVersion,currentVersion, verses){
+       var heading_container = document.getElementById("headings"); 
+       heading_container.innerHTML = heading;  
+
+       var element = document.getElementById("content-data");
+       element.innerHTML = content;  
+    }
+
+    function showLabelVerse(panel, verses, content){
+    showVerse(panel,verses, content);
+    }
+    
+    function showVerse(parent,verses, content) {   
+    
+      if (verses.style.display === "none") {
+        verses.style.display = "block";
+        parent.innerHTML="[-]";
+        parent.style.backgroundColor = active_color_background;
+        parent.style.color = active_color;
+        content.style.backgroundColor = active_color_background;
+        content.style.color = active_color;
+       
+        }
+      else if(verses.style.display ===""){
+        verses.style.display = "block";
+        parent.innerHTML="[-]";
+        parent.style.backgroundColor = active_color_background;
+        parent.style.color = active_color;
+        content.style.backgroundColor = active_color_background;
+        content.style.color = active_color;
+    
+      } else {
+        verses.style.display = "none";
+        parent.innerHTML="[+]";
+        parent.style.backgroundColor = normal_color_background;
+        parent.style.color = normal_color;
+        content.style.backgroundColor = normal_color_background;
+        content.style.color = normal_color;
+     
+      }
+    }
+</script>

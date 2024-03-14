@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activity.form.SignUp"
+    style="@style/custom_Activity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_sign_up"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout style="@style/custom_relative_layout">
+
+        <ScrollView style="@style/custom_scroll_view">
+
+            <LinearLayout
+                style="@style/background_group_box_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_first_name_sign_up"
+                    android:hint="@string/hint_first_name"
+                    style="@style/custom_TextInputLayout"
+                    >
+                    <EditText
+                        android:id="@+id/txt_first_name_sign_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_middle_name_sign_up"
+                    android:hint="@string/hint_middle_name"
+                    style="@style/custom_TextInputLayout">
+                    <EditText
+                        android:id="@+id/txt_middle_name_sign_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_last_name_sign_up"
+                    android:hint="@string/hint_last_name"
+                    style="@style/custom_TextInputLayout"
+                    >
+
+                    <EditText
+                        android:id="@+id/txt_last_name_sign_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textCapCharacters"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email_address_sign_up"
+                    android:hint="@string/hint_email_address"
+                    app:placeholderText="Ex. abc@email.com"
+                    app:startIconDrawable="@drawable/ic_email"
+                    style="@style/custom_TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/txt_email_address_sign_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textEmailAddress"
+                        tools:ignore="Autofill,LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password_sign_up"
+                    android:hint="@string/hint_password"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    style="@style/custom_TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/txt_password_sign_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textPassword"
+                        tools:ignore="Autofill,LabelFor"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_confirm_password_sign_up"
+                    android:hint="@string/hint_confirm_password"
+                    app:endIconMode="password_toggle"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    style="@style/custom_TextInputLayout">
+
+                    <EditText
+                        android:id="@+id/txt_confirm_password_sign_up"
+                        style="@style/custom_EditText"
+                        android:inputType="textWebPassword"
+                        tools:ignore="Autofill,LabelFor" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <CheckBox
+                    android:id="@+id/chk_accept_terms_conditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="Accept Terms &amp; Conditions"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp">
+
+                    <Button
+                        android:id="@+id/cmd_sign_up"
+                        style="@style/theme_normal_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginBottom="20dp"
+                        android:padding="15dp"
+                        android:text="@string/sign_up_button" />
+                </RelativeLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

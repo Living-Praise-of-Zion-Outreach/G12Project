@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:title="@string/menu_text_add_to_my_favorite"
+        android:id="@+id/menu_add_to_favorite_song_chords_lyrics"
+        android:icon="@drawable/ic_icon_favorite"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+
+    <item android:title="@string/menu_text_download_chords_lyrics"
+        android:id="@+id/menu_download_song_chords_lyrics"
+        android:icon="@drawable/ic_icon_download"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+
+
+    <item android:title="More Videos"
+        android:id="@+id/menu_view_more_videos_song_chords_lyrics"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+
+    <item android:title="View Settings"
+        android:id="@+id/menu_download_mnemonic_verse"
+        android:icon="@drawable/ic_icon_download"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute">
+
+        <menu>
+            <item android:title="Hide Videos"
+                android:id="@+id/menu_hide_show_videos_song_chords_lyrics"
+                android:icon="@drawable/ic_icon_download"
+                app:showAsAction="ifRoom"
+                android:iconTint="@color/white"
+                tools:ignore="UnusedAttribute"/>
+            <item android:title="Hide Audio"
+                android:id="@+id/menu_hide_show_audio_song_chords_lyrics"
+                android:icon="@drawable/ic_icon_download"
+                app:showAsAction="ifRoom"
+                android:iconTint="@color/white"
+                tools:ignore="UnusedAttribute"/>
+        </menu>
+
+    </item>
+</menu>

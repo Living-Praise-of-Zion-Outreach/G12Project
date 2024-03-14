@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <link rel="stylesheet" type="text/css" href="css/style_dark.css" rel="stylesheet">
+  <script> var normal_color = "#fff"; var normal_color_background = "#168B8D";  var active_color = "#fff";  var active_color_background = "#f2b909";</script>
+  </head>
+  <body>
+       
+   <div class="navbar">
+   <select id="cboBibleLanguageSelector" class="select custom-select" onchange='selectLanguage()'></select>
+        <a style="display:none"><span id="menu_header_title" class="" style="color:white">WEEK 1 | DAY 1</span></a>
+        <a href="javascript:void(0)" onclick="saveRecord()" id="btnUpdate"  style="float:right">Save Answers</a>
+        
+    </div>
+   
+   <div class="content-top">
+   
+    <img id="img_header" class="responsive" src="">
+   
+   <button class="accordion active">Topic</button>
+   
+        <div id="topic_content" class="panel" style="max-height:5000;height:auto"></div>
+        
+    <button class="accordion">Live The Lesson</button>
+        <div  class="panel">
+        <img src="images/live_in_the_lesson.png" class="responsive">
+              <p>
+                    <ol id="live_the_lesson_content">
+                    
+                    </ol>
+              </p>      
+        </div> 
+    <button class="accordion">Remember The Lesson</button>
+    
+    <div class="panel">
+      <img src="images/remember_the_lesson.png" class="responsive">
+      <p class="c"><i id="remeber_the_lesson"></i></p>
+    </div>
+
+    <button class="accordion">Study The Word</button>
+    <div class="panel">
+      <img src="images/study_the_word.png" class="responsive">  
+      <p id="study-word">
+           
+      </p>
+    </div>
+
+  
+   </div> 
+  </body>
+</html>
+
+<script>
+var mbook_name;
+var mlesson_no;
+var mLessonGuideLeaderID;
+var mNetworkLeaderID;
+var mEnrollmentType;
+
+/*
+loadData(`WEEK 1 | DAY asds`,
+            `images/week-1-learning-from-our-mistakes.jpg`,
+            `<h1 align=center>D  A  Y   1</h1>
+            <h2 align=center><b>A <span class="text-primary">NEW</span> DAY</b></h2>
+            
+            <p class="c">
+                <i>Henry Ford was fired from his first job and had to leave his first two companies before finally becoming successful with Ford Motor Company. 
+                Beethoven handled the violin awk-wardly and preferred playing his own compositions rather than improving his technique, even though his teacher said 
+                he was hopeless as a composer. Walt Disney was dismissed from his first job as an art apprentice. Although he is said to have experienced numerous 
+                setbacks and financial strug-gles throughout his life, he later went on to build the huge motion picture empire, Disney. Albert Einstein did not 
+                speak fluently until he was seven. His teacher described him as 'mentally slow, unsociable and adrift forever in his foolish dreams. 
+                He was initially refused entry to the Polytech-nic Institute in Zurich and when he submitted his paper on relativity to support his 
+                application to become a tutor at the University of Bern, it was rejected.</i>    
+            </p>
+            
+            `
+            ,
+            `
+            
+                    
+                            <li>
+                            <p class="j">What new things would you like to learn?</p>
+                            <textarea id="answer-1"></textarea>
+                            </li>
+                            <li>
+                                <p class="j">Do you know anybody who has learned something new (an instrument, language, sport, etc.), even though others thought they were too old to do so?</p>
+                                <textarea id="answer-2"></textarea>
+                                </li>
+                            <li>
+                            <p class="j">Look up the following words in a dictionary and write down their definitions: </p>
+                                <p>Decision:</p>  
+                                <input id="answer-3-0" type="text" placeholder="">
+                                <p>Change:</p>  
+                                <input id="answer-3-1" type="text" placeholder="">                  
+                            </li>
+                            <li>
+                                <p class="j">If you could choose to change something in your life, what would it be? If you are unable to change it, what do you 
+                                think God could do to bring about change?</p>
+                                <textarea id="answer-4"></textarea>
+                           </li>
+                    
+            `,
+            `Remember this..........`,
+            
+            `
+            <div class='tab'>
+  <button class='tablinks' onclick='openCity(event, "psalm1")'>Psalm 1</button>
+  <button class='tablinks' onclick='openCity(event, "psalm2")'>Psalm 2</button>
+  <button class='tablinks' onclick='openCity(event, "psalm3")'>Psalm 3</button>
+  <button class='tablinks' onclick='openCity(event, "proverbs")'>Proverbs 1</button>
+  <button class='tablinks active-2' onclick='openCity(event, "john")'>John 1</button>
+</div>
+ <div id='psalm1' class='tabcontent' >
+        <p class='j'>
+          <i class='indent'>
+          <span id='study-the-word-1'>
+          </span>
+          </i>
+        </p>  
+        <div style = 'width:100%;height:40px'>
+            <div style='float:right'>
+                <label class='container' >I have read it
+                  <input id='study-1' type='checkbox'>
+                  <span class='checkmark'></span>
+                </label>
+            </div>
+        </div>
+ </div>
+ <div id='psalm2' class='tabcontent'>
+        <p class='j'>
+          <i class='indent'>
+          <span id='study-the-word-2'>
+          </span>
+          </i>
+        </p>  
+        <div style = 'width:100%;height:40px'>
+            <div style='float:right'>
+                <label class='container' >I have read it
+                  <input id='study-2' type='checkbox'>
+                  <span class='checkmark'></span>
+                </label>
+            </div>
+        </div>
+ </div>
+ <div id='psalm3' class='tabcontent'>
+        <p class='j'>
+          <i class='indent'>
+          <span id='study-the-word-3'>
+          </span>
+          </i>
+        </p>  
+        <div style = 'width:100%;height:40px'>
+            <div style='float:right'>
+                <label class='container' >I have read it
+                  <input id='study-3' type='checkbox'>
+                  <span class='checkmark'></span>
+                </label>
+            </div>
+        </div>
+ </div>
+ <div id='proverbs' class='tabcontent'>
+        <p class='j'>
+          <i class='indent'>
+          <span id='study-the-word-4'>    
+          </span>
+          </i>
+        </p>  
+        <div style = 'width:100%;height:40px'>
+            <div style='float:right'>
+                <label class='container' >I have read it
+                  <input id='study-4' type='checkbox'>
+                  <span class='checkmark'></span>
+                </label>
+            </div>
+        </div>
+ </div>
+ <div id='john' class='tabcontent active-2' style='display:block'>
+        <p class='j'>
+          <i class='indent'>
+          <span id='study-the-word-5'>                        
+          </span>
+          </i>
+        </p>  
+        <div style = 'width:100%;height:40px'>
+            <div style='float:right'>
+                <label class='container' >I have read it
+                  <input id='study-5' type='checkbox'>
+                  <span class='checkmark'></span>
+                </label>
+            </div>
+        </div>
+ </div>
+            `
+ 
+            ,'English~Tagalog~Cebuano','English', 1,2,"EnrollmentType","book_name","lesson_no" ,"ans1","ans2","decision^change","ans4","ans5","ans6","ans7","ans8","ans9",
+                "n,n,n,n,n,n","word_1","word2","word3","word4","word5","","");  */
+
+
+function loadData(menu_header_title, img_header, topic_content, live_the_lesson_content,remeber_the_lesson,study_the_word,  languageList,currentLanguage,  LessonGuideLeaderID, NetworkLeaderID, EnrollmentType, book_name,lesson_no,  ans_1, ans_2, ans_3, ans_4,ans_5, ans_6, ans_7, ans_8, ans_9, study, word_1, word_2, word_3, word_4, word_5, word_6, word_7){
+    mLessonGuideLeaderID = LessonGuideLeaderID; mNetworkLeaderID = NetworkLeaderID; mEnrollmentType = EnrollmentType;
+    mbook_name = book_name; mlesson_no = lesson_no;
+    
+    document.getElementById("menu_header_title").innerHTML  = menu_header_title;
+    document.getElementById("img_header").src = img_header;
+    document.getElementById("topic_content").innerHTML  = topic_content;
+    document.getElementById("live_the_lesson_content").innerHTML  = live_the_lesson_content;
+    document.getElementById("remeber_the_lesson").innerHTML  = remeber_the_lesson;
+    
+    document.getElementById("study-word").innerHTML  = study_the_word;
+    
+    assign_answers("answer-1",ans_1);
+    assign_answers("answer-2",ans_2);
+    assign_answers("answer-3",ans_3);
+    assign_answers("answer-4",ans_4);
+    assign_answers("answer-5",ans_5);
+    assign_answers("answer-6",ans_6);
+    assign_answers("answer-7",ans_7);
+    assign_answers("answer-8",ans_8);
+    assign_answers("answer-9",ans_9);
+      
+    assign_check_read(study);
+      
+    assign_study_the_word("study-the-word-1", word_1);
+    assign_study_the_word("study-the-word-2", word_2);
+    assign_study_the_word("study-the-word-3", word_3);
+    assign_study_the_word("study-the-word-4", word_4);
+    assign_study_the_word("study-the-word-5", word_5);
+    assign_study_the_word("study-the-word-6", word_6);
+    assign_study_the_word("study-the-word-7", word_7);
+    
+    
+    var combobox = document.getElementById("cboBibleLanguageSelector");
+         var list = languageList.split("~");
+         for (i = 0; i < list.length; i++) {
+                var option = document.createElement("option");
+                option.text = list[i];
+                if(currentLanguage==list[i]){ option.setAttribute('selected', true);}
+                combobox.add(option);
+         }
+    
+ }
+ 
+ function selectLanguage(){
+    const select = document.querySelector('select')
+    const text = getSelectedText(select);
+    javascript_event.getCurrentLanguage(text);
+    //alert(text);
+    }
+    
+      const getSelectedText = (el) => {
+      if (el.selectedIndex === -1) {
+        return null;
+      }
+      return el.options[el.selectedIndex].text;
+    }
+ 
+ function assign_answers(objectName, ans_){
+    //CHECK IF THERE IS ANSWERS
+    if(ans_ != "")
+            {
+                //IN CASE IF THERE IS MANY SUB ANSWERS
+                var data = ans_.split("^");
+                if(data.length>1)
+                    {
+                        for(i=0;i<data.length;i++)
+                            {
+                                var obj = document.getElementById(objectName + "-" + i);
+                                if(obj) { obj.value = data[i]; }
+                            }
+                    }
+                else
+                    {
+                        //IN CASE IF THERE IS NO ANSWERS//
+                        var obj = document.getElementById(objectName);
+                        if(obj) { obj.value = ans_; }
+                    }    
+            }       
+  }
+  function assign_check_read(study)
+  {  
+             var data = study.split(",");
+              if(data.length>1){
+                  for(i=0;i<data.length;i++)
+                    {  
+                        var id = i + 1;
+                        var obj = document.getElementById("study-" + id );
+                        if(obj) 
+                            {
+                                if(data[i]=='y') { obj.checked = true; }else{ obj.checked = false; }                                 
+                            }
+                    }
+              }
+  }
+  function assign_study_the_word(objectName,word)
+  {
+    var obj = document.getElementById(objectName);
+    if(obj) 
+        {
+            if(word!="") 
+                {
+                    obj.innerHTML = word;
+                }
+        }
+  }
+    
+ function saveRecord(){
+      //var answer_1 = document.getElementById("answer-1").value;
+      var answer_1 = get_answers("answer-1");
+      var answer_2 = get_answers("answer-2");
+      var answer_3 = get_answers("answer-3");
+      var answer_4 = get_answers("answer-4");
+      var answer_5 = get_answers("answer-5");
+      var answer_6 = get_answers("answer-6");
+      var answer_7 = get_answers("answer-7");
+      var answer_8 = get_answers("answer-8");
+      var answer_9 = get_answers("answer-9");
+      
+      var study_indicator = get_study_indicator();
+
+     //alert(study_indicator);
+     javascript_event.getData(mLessonGuideLeaderID, mNetworkLeaderID, mEnrollmentType, mbook_name, mlesson_no, answer_1,answer_2,answer_3,answer_4,answer_5,answer_6,answer_7,answer_8,answer_9,study_indicator);
+ }
+ 
+function get_answers(objectName)
+    {     
+    var index=0;
+    var answers="";
+    var indicator="single";
+       
+        for(i=0;i<5;i++)
+            {
+                //IN CASE IF THERE IS NO ANSWERS//
+                var obj = document.getElementById(objectName + "-" + i);
+                
+                //alert(objectName + "-" + i);
+                
+                if(obj) 
+                    { 
+                        if(answers=="") { answers = obj.value; }
+                        else { answers += "^" + obj.value; }
+                        indicator = "sub";
+                    }
+            }
+       
+       if(indicator=="single"){
+             var obj = document.getElementById(objectName);
+                if(obj) 
+                    {
+                        return obj.value;
+                    }
+        }else   {
+            return answers;
+        }
+        
+        return "";               
+    }
+function get_study_indicator(){
+
+      var study_indicator = "";
+      
+      for(i=0;i<5;i++)
+        {
+            var index = i + 1;
+            var study = document.getElementById("study-" + index);
+            if(study)
+                {
+                    if (study.checked)
+                        { 
+                            if(study_indicator=="") study_indicator = "y"; 
+                            else study_indicator += ",y"; 
+                        }
+                    else{ 
+                            if(study_indicator=="") study_indicator = "n"; 
+                            else study_indicator += ",n";  
+                        }
+                }
+        }
+      
+     return study_indicator;
+        
+    }     
+ 
+/* accordiong control */
+var acc = document.getElementsByClassName("accordion"); var i;for (i = 0; i < acc.length; i++) {  acc[i].addEventListener("click", function() {    this.classList.toggle("active");    var panel = this.nextElementSibling;    if (panel.style.maxHeight) {      panel.style.maxHeight = null;    } else {      var total_height = panel.scrollHeight + 100;      panel.style.maxHeight = total_height + "px";    }   }); }
+/* tab control */  
+function openCity(evt, cityName) {      var i, tabcontent, tablinks;      tabcontent = document.getElementsByClassName("tabcontent");                        for (i = 0; i < tabcontent.length; i++) {        tabcontent[i].style.display = "none";      }      tablinks = document.getElementsByClassName("tablinks");      for (i = 0; i < tablinks.length; i++) {        tablinks[i].className = tablinks[i].className.replace(" active-2", "");      }      document.getElementById(cityName).style.display = "block";      evt.currentTarget.className += " active-2";                  var acc = document.getElementById("study-word");      var total_height = acc.scrollHeight + tabcontent.scrollHeight + 100;      acc.style.maxHeight = total_height + "px";   acc.style.Height = total_height + "px";          }   
+/* opening verse */
+function showLabelVerse(panel, verses, content){  showVerse(panel,verses, content); }  
+function showVerse(parent,verses, content) {     if (verses.style.display === "none") {  verses.style.display = "block";  parent.innerHTML="[-]";  parent.style.backgroundColor = active_color_background;  parent.style.color = active_color;  content.style.backgroundColor = active_color_background;  content.style.color = active_color;    }  else if(verses.style.display ===""){  verses.style.display = "block";  parent.innerHTML="[-]";   parent.style.backgroundColor = active_color_background;   parent.style.color = active_color;  content.style.backgroundColor = active_color_background;   content.style.color = active_color;   } else {   verses.style.display = "none";  parent.innerHTML="[+]";   parent.style.backgroundColor = normal_color_background;   parent.style.color = normal_color;   content.style.backgroundColor = normal_color_background;    content.style.color = normal_color;   }  }
+
+</script>

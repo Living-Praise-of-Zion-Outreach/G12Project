@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/background_group_box_light"
+    android:paddingBottom="1dp">
+
+
+    <androidx.cardview.widget.CardView style="@style/CardView_Profile"
+        android:id="@+id/item_cv_list_search_person"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="0dp"
+        app:contentPadding="8dp"
+        app:cardCornerRadius="5dp"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civ_logo_list_search_person"
+                style="@style/circle_image_view"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/default_photo_dark"
+                app:civ_border_width="1dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_title_list_search_person"
+                style="@style/Header_TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="SYLVSTER R. BELONIO"
+                android:textStyle="bold"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/civ_logo_list_search_person"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_lavel_search_person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Church Name:"
+                android:textSize="12sp"
+                style="@style/label_simple_accent"
+                android:textStyle="normal"
+                app:layout_constraintStart_toEndOf="@+id/civ_logo_list_search_person"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_list_search_person"
+                />
+
+            <TextView
+                android:id="@+id/tv_subsubtitle_search_person"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_height="wrap_content"
+                android:text="Evangelized"
+                android:textSize="11sp"
+                android:textStyle="italic"
+
+                app:layout_constraintStart_toEndOf="@+id/civ_logo_list_search_person"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtitle_search_person" />
+
+            <TextView
+                android:id="@+id/tv_subtitle_search_person"
+                android:layout_width="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Evangelized"
+                android:textSize="12sp"
+                android:textStyle="normal"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_subtitle_lavel_search_person"
+                app:layout_constraintTop_toBottomOf="@+id/tv_title_list_search_person" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

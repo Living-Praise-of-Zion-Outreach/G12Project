@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.form.ProfileFamilyBackgroundForm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_family_background_form"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout
+        style="@style/custom_relative_layout">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:paddingTop="0dp">
+
+        <LinearLayout
+            style="@style/background_group_box_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_logo_family_background"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/default_photo"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_delete_logo_family_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_icon_delete"
+                        android:visibility="gone"
+                        android:layout_marginBottom="50dp"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="ContentDescription"
+                        style="@style/Float_Action_Button_Delete"
+                        />
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/fab_upload_logo_family_background"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_icon_photo_camera"
+                        app:fabSize="mini"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="ContentDescription"
+                        style="@style/Float_Action_Button_Default"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_name_family_background"
+                android:hint="@string/hint_rel_name"
+                style="@style/custom_TextInputLayout">
+                <EditText
+                    android:id="@+id/tv_name_family_background"
+                    style="@style/custom_EditText"
+                    android:inputType="textCapCharacters"
+                    tools:ignore="Autofill,LabelFor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_age_family_background"
+                android:hint="@string/hint_rel_age"
+                style="@style/custom_TextInputLayout">
+                <EditText
+                    android:id="@+id/tv_age_family_background"
+                    style="@style/custom_EditText"
+                    android:inputType="number"
+                    tools:ignore="Autofill,LabelFor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_dob_family_background"
+                android:hint="@string/hint_date_of_birth"
+                app:endIconMode="clear_text"
+                app:startIconDrawable="@drawable/ic_icon_calendar"
+                style="@style/custom_TextInputLayout"
+                android:layout_width="170dp">
+                <EditText
+                    android:id="@+id/tv_dob_family_background"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_occupation_family_background"
+                android:hint="@string/hint_rel_occupation"
+                style="@style/custom_TextInputLayout">
+                <EditText
+                    android:id="@+id/tv_occupation_family_background"
+                    style="@style/custom_EditText"
+                    android:inputType="textCapCharacters"
+                    tools:ignore="Autofill,LabelFor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_contact_no_family_background"
+                android:hint="@string/hint_mobile_no"
+                style="@style/custom_TextInputLayout">
+                <EditText
+                    android:id="@+id/tv_contact_no_family_background"
+                    style="@style/custom_EditText"
+                    android:inputType="number"
+                    tools:ignore="Autofill,LabelFor"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_relationship_family_background"
+                android:hint="@string/hint_rel_family_relationship"
+                style="@style/custom_TextInputLayout"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ctv_relationship_family_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingStart="16dp"
+                    android:inputType="none"
+                    tools:ignore="LabelFor,RtlSymmetry"
+                    style="@style/custom_auto_complete_textview">
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_condition_family_background"
+                android:hint="@string/hint_rel_condition"
+                style="@style/custom_TextInputLayout"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/ctv_condition_family_background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:paddingStart="16dp"
+                    android:inputType="none"
+                    tools:ignore="LabelFor,RtlSymmetry"
+                    style="@style/custom_auto_complete_textview">
+                </AutoCompleteTextView>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

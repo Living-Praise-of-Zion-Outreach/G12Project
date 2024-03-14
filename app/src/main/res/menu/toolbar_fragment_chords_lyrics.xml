@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/menu_text_search_song"
+        android:id="@+id/menu_add_person_consolidate_html_viewer"
+        android:icon="@drawable/ic_icon_search"
+        app:showAsAction="ifRoom"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+
+</menu>

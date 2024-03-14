@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SplashScreen"
+    style="@style/splash_screen_backcolor"
+    >
+
+    <ImageView
+        android:id="@+id/iv_logo_splash_screen"
+        android:padding="0dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/g12textlogo"
+        tools:ignore="ContentDescription" />
+
+
+    <ProgressBar
+        android:id="@+id/pb_bar_splash_screen"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_height="5dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/_first"
+        android:indeterminateTint="#ffffff"
+        android:indeterminate="true"
+        android:scaleY="2"
+        app:layout_constraintBottom_toTopOf="@+id/tv_footer_heading_splash_screen"
+         />
+
+    <TextView
+        android:id="@+id/tv_footer_heading_splash_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="@string/powered_by"
+        app:layout_constraintBottom_toTopOf="@+id/tv_footer_sub_heading_splash_screen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/custom_TextView_Header"
+        />
+
+    <TextView
+        android:textColor="@color/white"
+        android:paddingBottom="50dp"
+        android:id="@+id/tv_footer_sub_heading_splash_screen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/powered_by_desc"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

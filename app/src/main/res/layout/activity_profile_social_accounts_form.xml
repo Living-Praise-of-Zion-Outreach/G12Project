@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/custom_Activity"
+    tools:context=".Activity.form.ProfileSocialAccountsForm">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_social_form"
+        style="@style/custom_ToolBar" />
+
+    <RelativeLayout style="@style/custom_relative_layout">
+        <ScrollView style="@style/custom_scroll_view">
+        <LinearLayout
+            style="@style/background_group_box_light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_facebook_social_form"
+                android:hint="@string/hint_facebook"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/tv_facebook_social_form"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_youtube_social_form"
+                android:hint="@string/hint_youtube"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/tv_youtube_social_form"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_tiktok_social_form"
+                android:hint="@string/hint_tiktok"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/tv_tiktok_social_form"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_linkin_social_form"
+                android:hint="@string/hint_linkin"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/tv_linkin_social_form"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_instagram_social_form"
+                android:hint="@string/hint_instagram"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/tv_instagram_social_form"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_twitter_social_form"
+                android:hint="@string/hint_twitter"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                style="@style/custom_TextInputLayout"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/tv_twitter_social_form"
+                    android:inputType="textMultiLine"
+                    android:gravity="start|top"
+                    style="@style/custom_EditText"
+                    tools:ignore="Autofill,LabelFor"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</RelativeLayout>

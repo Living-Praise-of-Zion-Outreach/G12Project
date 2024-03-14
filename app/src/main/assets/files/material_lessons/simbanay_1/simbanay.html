@@ -1,0 +1,373 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title></title>
+  <style>
+                        :root { --_border: #5f5f5f;  --_dark_first: #3a0000; --separator_light: #ececec; --_light_first: #8b0000; --_first: #660000; --_light_second:#fff7f7; --_second:#FFF3F0; --_third:#868784; --_fourth:#F9DD4D; --_super_dark_fifth:#0a1a29; --_dark_fifth:#0a1a29; --_fifth:#102E4A; --_six:#313628; --_light_seven:#1ebabd; --_seven:#168B8D; 
+                            --lightColor_y: #fff090; --lightColor_r: #ffd6d5; --lightColor_g: #d4fdd5; --lightColor_br: #ffd5a9; --lightColor_b: #d6d7ff;
+                            --darkColor_y: #ffcc00; --darkColor_r: #ff4d41; --darkColor_g: #38d142; --darkColor_br: #d77b42; --darkColor_b: #7f8aff;
+                        }
+                        *{font-family: Arial, Geneva, Helvetica, sans-serif; font-size:16px;-webkit-user-select: none;}
+                        .text-default {color :#8b0000} 
+                        .text-primary { color: #660000;}
+                        .text-error { color: #dc3545;}
+                        .text-success {color: #198754}
+                        .text-secondary {color: #757575;}
+                        .text-super-light-primary { color: #e11919 }
+                        .text-light-primary { color: #8b0000 }
+                        .font-italic { font-style: italic; } 
+                        .font-bold { font-weight: bold; } 
+                         body { width:100%; background-color: #FFF3F0;margin: 0px; padding: 0px; height: 100%;} 
+                        .content{  padding: 0px 20px 20px 20px; } 
+                        .indent{margin-left:40px} 
+                        .j{text-align:justify;} 
+                        .i{font-style: italic;}
+                        .c {text-align:center}
+                        .p{text-align: justify;} 
+                        .headings{background-color: #D3D3D3;padding: 14px 16px;box-shadow: 0 5px 7px rgb(0 0 0 / 0.4);} 
+                        .column { float: left; width: 50%; padding: 0px; }
+                        .row:after { content: ""; display: table; clear: both; }
+                        .mb-0{ margin-bottom:0dp; }
+                        .row{ padding-top:20px;margin-bottom:20px; }  
+                        .mt-1 {margin-top:10dp;}
+                        .verses{ display:none;padding:1px 16px 1px 16px;background-color:#fff7bf;border-radius: 0px 20px 20px 20px;margin:4px 0px 0px 5px}
+                        .button-verse{width:30px;height:30px;background-color:#f9cece;border-color: #8b0000;display:inline;color:black;display:inline;padding:5px 10px 5px 10px;border-radius: 10px 10px 0px 0px;margin:0px 0px 0px 5px}
+                        .button-verse-ext{display:inline;}
+                        .text-sm {font-size:10px;}
+                        .highlight-verse{background-color:#fff7bf;color:black}
+                        .bullet-none{list-style:none}
+                        span{text-align:justify}
+                        .sj{text-align: justify; display:block;}
+                        button {color:white}
+                                               
+                        /* Style the tab */
+                        .tab {
+                          border-radius: 20px 20px 0px 0px;
+                          overflow: hidden;
+                          border: 1px solid #660000;
+                          background-color: #660000;
+                          color:"#ffffff";
+                        }
+                        .tab-2 {
+                          border-radius: 20px 20px 0px 0px;
+                          overflow: hidden;
+                          border: 1px solid #660000;
+                          background-color: #660000;
+                          color:"#ffffff";
+                        }
+                        .tab-3 {
+                          border-radius: 20px 20px 0px 0px;
+                          overflow: hidden;
+                          border: 1px solid #660000;
+                          background-color: #660000;
+                          color:"#ffffff";
+                        }
+
+                        /* Style the buttons inside the tab */
+                        .tab button {
+                          background-color: inherit;
+                          float: left;
+                          border: none;
+                          outline: none;
+                          cursor: pointer;
+                          padding: 14px 16px;
+                          transition: 0.3s;
+                          font-size: 12px;
+                          color:"#ffffff";
+                        }
+                        .tab-2 button {
+                          background-color: inherit;
+                          float: left;
+                          border: none;
+                          outline: none;
+                          cursor: pointer;
+                          padding: 14px 16px;
+                          transition: 0.3s;
+                          font-size: 12px;
+                          color:"#ffffff";
+                        }
+                        .tab-3 button {
+                          background-color: inherit;
+                          float: left;
+                          border: none;
+                          outline: none;
+                          cursor: pointer;
+                          padding: 14px 16px;
+                          transition: 0.3s;
+                          font-size: 12px;
+                          color:"#ffffff";
+                        }
+
+                        /* Change background color of buttons on hover */
+                        .tab button:hover {
+                          background-color: #8b0000;
+                        }
+                        .tab-2 button:hover {
+                          background-color: #8b0000;
+                        }
+                        .tab-3 button:hover {
+                          background-color: #8b0000;
+                        }
+
+                        /* Create an active/current tablink class */
+                        .tab button.active {
+                          background-color: #8b0000;
+                        }
+                        .tab-2 button.active {
+                          background-color: #8b0000;
+                        }
+                        .tab-3 button.active {
+                          background-color: #8b0000;
+                        }
+
+                        /* Style the tab content */
+                        .tabcontent {
+                          display: none;
+                          background-color: #fff7bf;
+                          padding: 6px 12px;
+                          border: 1px solid #ccc;
+                          border-top: none;
+                          border-radius: 0px 0px 20px 20px;
+                          -webkit-animation: fadeEffect 1s;
+                          animation: fadeEffect 1s;
+                        }
+                        .tabcontent-2 {
+                          display: none;
+                          background-color: #fff7bf;
+                          padding: 6px 12px;
+                          border: 1px solid #ccc;
+                          border-top: none;
+                          border-radius: 0px 0px 20px 20px;
+                          -webkit-animation: fadeEffect 1s;
+                          animation: fadeEffect 1s;
+                        }
+                        .tabcontent-3 {
+                          display: none;
+                          background-color: #fff7bf;
+                          padding: 6px 12px;
+                          border: 1px solid #ccc;
+                          border-top: none;
+                          border-radius: 0px 0px 20px 20px;
+                          -webkit-animation: fadeEffect 1s;
+                          animation: fadeEffect 1s;
+                        }
+                                        
+                        /* Fade in tabs */
+                        @-webkit-keyframes fadeEffect {
+                          from {opacity: 0;}
+                          to {opacity: 1;}
+                        }
+
+                        @keyframes fadeEffect {
+                          from {opacity: 0;}
+                          to {opacity: 1;}
+                        }                        
+                        
+                        .custom-select{
+                            background-color:var(--_light_first);
+                            padding:5px 5px 5px 10px;
+                            border-radius: 10px;
+                            margin-top:3px;                           
+                            width:auto;
+                            border-color: var(--_first);
+                  		    border-width: 1px 1px 1px 1px;
+                            color:white;
+                            float:right;
+                          }
+                          .select select,
+                  		.select option {
+                  			border: none;
+                  			outline: none;
+                  			font-size: 18px;
+                  			padding: 5px 5px 5px 5px;
+                  			background-color: var(--_first);
+                  			color: white;
+                  			-webkit-appearance: none; /* for Safari */
+                  			margin: 0;
+                  			border-radius: 0;
+                  		}
+                  		.custom-select:focus { 
+                              outline: none !important;
+                              border-color: var(--_first);
+                              box-shadow: 0 0 10px var(--_first);
+                           }
+                        .verse-box{
+                            background-color: #fff7bf;
+                            padding: 6px 12px;
+                          border: 1px solid #ccc;
+                          border-top: none;
+                          border-radius: 20px 20px 20px 20px;
+                        }   
+                                                                                        
+  </style> 
+
+</head>
+<body>
+    <h3 id="headings" class='headings'>1. SALVATION | <span class='text-light-primary'>KALUWASAN</span></h3>           
+    <div class='content'>
+
+          <select id="cboBibleVersionSelector" class="select custom-select" onchange='selectBibleVersion()'></select>
+
+          <br><br>
+
+          <div id="list-of-verses"></div>
+
+          <div  id="content-data"></div>   
+          
+    </div>
+</body>
+  
+  
+</html>
+
+<script>
+/*
+loadData("THIS IS heading","THIS IS CONTENT ONLY TO VIEW","NIV,TEV,POWER,NEW INTERNATIONAL VERSION","POWER",`
+
+<p class='j'><b>Ephesians 2:1-10</b></p>
+              <div id="word-1" class="verse-box">
+                        <p class="j">
+                          <i class="indent">
+                          <span class="highlight-verse">
+                              <sup class="text-sm">1</sup> What shall we say, then? Shall we go on sinning so that grace may increase?
+                              <sup class="text-sm">2</sup> By no means! We are those who have died to sin; how can we live in it any longer?
+                              <sup class="text-sm">3</sup> Or don't you know that all of us who were baptized into Christ Jesus were baptized into his death?
+                              <sup class="text-sm">4</sup> We were therefore buried with him through baptism into death in order that, just as Christ was raised from the dead through the glory of the Father, we too may live a new life.
+                              <sup class="text-sm">5</sup> For if we have been united with him in a death like his, we will certainly also be united with him in a resurrection like his. 
+                              <sup class="text-sm">6</sup> For we know that our old self was crucified with him so that the body ruled by sin might be done away with,[a] that we should no longer be slaves to sin             
+                          </span>
+                          </i>
+              </div>
+
+
+`);
+*/
+
+
+
+function selectBibleVersion(){
+    const select = document.querySelector('select')
+    const text = getSelectedText(select);
+    
+     javascript_event.getBibleVersion(text);
+    alert(text);
+}
+
+function loadData(heading,content,listVersion,currentVersion, verses){
+   var heading_container = document.getElementById("headings"); 
+   heading_container.innerHTML = heading;  
+
+   var element = document.getElementById("content-data");
+   element.innerHTML = content;  
+   
+   var combobox = document.getElementById("cboBibleVersionSelector");
+   var list = listVersion.split("~");
+   for (i = 0; i < list.length; i++) {
+          var option = document.createElement("option");
+          option.text = list[i];
+          if(currentVersion==list[i]){ option.setAttribute('selected', true);}
+          combobox.add(option);
+   }
+   
+   var study_container = document.getElementById("list-of-verses");
+   study_container.innerHTML = verses;  
+          
+}
+
+
+const getSelectedText = (el) => {
+  if (el.selectedIndex === -1) {
+    return null;
+  }
+  return el.options[el.selectedIndex].text;
+}
+
+
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  
+  document.getElementById("btnClose").style.display = "block";
+  
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openCity_2(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-2");
+  
+  document.getElementById("btnClose-2").style.display = "block";
+  
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-2");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function openCity_3(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent-3");
+  
+  document.getElementById("btnClose-3").style.display = "block";
+  
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks-3");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+function closeAll(){
+    document.getElementById("btnClose").style.display = "none";
+    tabcontent = document.getElementsByClassName("tabcontent");
+    var tablinks = document.getElementsByClassName("tablinks");
+    tabcontent[0].style.display = "none";
+    tabcontent[1].style.display = "none";
+    tabcontent[2].style.display = "none";
+    tablinks[0].className = tablinks[0].className.replace(" active", "");
+    tablinks[1].className = tablinks[1].className.replace(" active", "");
+    tablinks[2].className = tablinks[2].className.replace(" active", "");
+}
+function closeAll_2(){
+    document.getElementById("btnClose-2").style.display = "none";
+    tabcontent = document.getElementsByClassName("tabcontent-2");
+    var tablinks = document.getElementsByClassName("tablinks-2");
+    tabcontent[0].style.display = "none";
+    tabcontent[1].style.display = "none";
+    tabcontent[2].style.display = "none";
+    tablinks[0].className = tablinks[0].className.replace(" active", "");
+    tablinks[1].className = tablinks[1].className.replace(" active", "");
+    tablinks[2].className = tablinks[2].className.replace(" active", "");
+}
+function closeAll_3(){
+    document.getElementById("btnClose-3").style.display = "none";
+    tabcontent = document.getElementsByClassName("tabcontent-3");
+    var tablinks = document.getElementsByClassName("tablinks-3");
+    tabcontent[0].style.display = "none";
+    tabcontent[1].style.display = "none";
+    tabcontent[2].style.display = "none";
+    tablinks[0].className = tablinks[0].className.replace(" active", "");
+    tablinks[1].className = tablinks[1].className.replace(" active", "");
+    tablinks[2].className = tablinks[2].className.replace(" active", "");
+}
+
+</script>

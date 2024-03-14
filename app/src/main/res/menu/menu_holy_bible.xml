@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_search_holy_bible"
+        android:icon="@drawable/ic_icon_search"
+        android:title="Select Gospel"
+        app:showAsAction="ifRoom|withText"
+        />
+
+       <item
+           android:id="@+id/menu_search_bible_version_holy_bible"
+         android:icon="@drawable/ic_icon_version"
+         android:title="Select Version"
+         app:showAsAction="ifRoom"
+        />
+
+</menu>

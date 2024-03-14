@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/background_group_box_light"
+    android:paddingBottom="1dp">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/item_cv_list_holy_bible_chapter_verse_selector"
+        style="@style/CardView_Holy_Bible_Chapter_Verse"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardCornerRadius="0dp"
+        app:contentPadding="0dp"
+
+        android:layout_margin="1dp"
+        android:layout_height="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+            <TextView
+                android:id="@+id/tv_title_holy_bible_chapter_verse_selector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:ellipsize="end"
+                android:visibility="gone"
+                android:maxLines="1"
+                android:gravity="center"
+                android:text="@string/sample_text"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_icon_holy_bible_chapter_verse_selector"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="26dp"
+                android:layout_marginBottom="26dp"
+                style="@style/accent_icons"
+                android:src="@drawable/ic_icon_info"
+                android:contentDescription="@string/todo" />
+
+      </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

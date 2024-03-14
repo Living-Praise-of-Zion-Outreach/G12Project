@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item android:title="Search Name"
+        android:id="@+id/menu_search_evangelism"
+        android:icon="@drawable/ic_icon_search"
+        app:showAsAction="ifRoom|collapseActionView"
+        android:iconTint="@color/white"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        tools:ignore="UnusedAttribute" />
+
+    <item android:title="View Report"
+        android:id="@+id/menu_view_evangelism"
+        android:icon="@drawable/ic_icon_analytics"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        android:visible="false"
+        tools:ignore="UnusedAttribute" />
+
+    <item android:title="Synchronize From Server"
+        android:id="@+id/menu_sync_evangelism"
+        android:icon="@drawable/ic_icon_refresh"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"
+        tools:ignore="UnusedAttribute" />
+
+</menu>
